@@ -1,6 +1,6 @@
 'use strict';
 
-import webpack from 'webpack';
+const webpack = require('webpack');
 
 module.exports = {
     entry: './app/index.js',
@@ -14,7 +14,7 @@ module.exports = {
             {
               test: /jsx?$/,
               exclude: /(node_modules|bower_components)/,
-              loader: 'babel',
+              loader: 'babel-loader',
               query: {
                 presets: ['react', 'es2015']
               }
