@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-react": "webpack -w",
-    "build-css": "node-sass -w styles/ -o public/css/"
+    "build-css": "node-sass -w styles/ -o public/css/",
+    "build-all": "node-sass -w styles/ -o public/css/ && webpack -w"
   },
   "author": "Scout O'Keefe",
   "license": "ISC",
