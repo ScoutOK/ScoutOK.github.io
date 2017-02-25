@@ -12,12 +12,12 @@ export default class Main extends Component {
 
   render () {
     return (
-      <div id='hor-flex'>
-        <Sidebar />
-        <div id='right-cont'>
-          <Navbar />
-          <div id='main-cont'>
-            <Projects />
+      <div>
+        <Navbar />
+        <div id='hor-flex'>
+          <Sidebar />
+          <div id='right-cont'>
+              <Projects />
           </div>
         </div>
       </div>

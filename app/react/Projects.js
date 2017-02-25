@@ -1,11 +1,19 @@
-import React from 'react'
+import React from 'react';
+
+import projects from '../../public/data/projects';
+
+import Project from './Project';
 
 export default (props) => {
+  console.log(projects)
   return (
     <div>
-      <h1>Selected Projects...</h1>
-      <h2>Degender Your Internet</h2>
-      <p>Are you tired of gender thoughts? Do you wish to experience the internet without constently being reminded of your marginalized gender status? This Google Chrome extension will remove and gendered pronouns from your webpages and de-gender any gendered adjectives.</p>
+      <h1>Selected Projects</h1>
+      {projects.map((project, idx) => {
+        return (
+          <Project project={project} key={idx}/>
+        )
+      })}
     </div>
   )
 }
