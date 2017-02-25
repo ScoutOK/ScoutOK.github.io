@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 
-import Sidebar from './Sidebar';
 import Navbar from './Navbar';
 import Projects from './Projects';
 import Presentations from './Presentations';
@@ -16,7 +15,6 @@ export default class Main extends Component {
       <div>
         <Navbar />
         <div id='hor-flex'>
-          <Sidebar />
           <div id='right-cont'>
               <Projects />
               <Presentations />
