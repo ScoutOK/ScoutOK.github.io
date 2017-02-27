@@ -9494,13 +9494,9 @@ var Main = function (_Component) {
         _react2.default.createElement(_Navbar2.default, null),
         _react2.default.createElement(
           'div',
-          { id: 'hor-flex' },
-          _react2.default.createElement(
-            'div',
-            { id: 'right-cont' },
-            _react2.default.createElement(_Projects2.default, null),
-            _react2.default.createElement(_Presentations2.default, null)
-          )
+          { id: 'main-cont' },
+          _react2.default.createElement(_Projects2.default, null),
+          _react2.default.createElement(_Presentations2.default, null)
         )
       );
     }
@@ -9564,6 +9560,11 @@ exports.default = function (props) {
         'li',
         null,
         'Presentations'
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
+        'Design Work'
       ),
       _react2.default.createElement(
         'li',
@@ -9689,7 +9690,7 @@ exports.default = function (props) {
     'div',
     null,
     _react2.default.createElement(
-      'h1',
+      'h2',
       null,
       'Selected Projects'
     ),

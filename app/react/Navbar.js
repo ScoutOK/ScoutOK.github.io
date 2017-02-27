@@ -8,6 +8,7 @@ export default (props) => {
         <li>Home</li>
         <li>Projects</li>
         <li>Presentations</li>
+        <li>Design Work</li>
         <li>Contact</li>
       </ul>
     </nav>

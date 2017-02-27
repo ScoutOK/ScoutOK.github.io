@@ -3,7 +3,7 @@ $backMed: #777;
 $backLight: #eee;
 $sidebarWidth: 15%;
 $mainWidth: 70%;
-$navHeight: 3em;
+$navHeight: 3.5em;
 
 
 * {
@@ -17,42 +17,30 @@ body {
   background: $backDark;
 }
 
-#hor-flex {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  padding-top: $navHeight
-}
-
-#sidebar {
-  background: $backLight;
-  flex-basis: $sidebarWidth;
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: $sidebarWidth;
-    //height: calc(100vh - 3em);
-    position: fixed;
-    left: 0;
-    top: calc((100vh - 3em)/2);
-  }
-  li {
-    text-align: center;
-    padding: 1rem 0;
-  }
-}
-
-#right-cont {
-  width: 100%;
-  flex-basis: $mainWidth;
-  background: $backMed;
-}
+// #sidebar {
+//   background: $backLight;
+//   flex-basis: $sidebarWidth;
+//   ul {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+//     width: $sidebarWidth;
+//     //height: calc(100vh - 3em);
+//     position: fixed;
+//     left: 0;
+//     top: calc((100vh - 3em)/2);
+//   }
+//   li {
+//     text-align: center;
+//     padding: 1rem 0;
+//   }
+// }
 
 nav {
-  background-color: darkcyan;
+  background-color: $backLight;
   font-family: 'Asul', sans-serif;
   position: fixed;
+  top: 0;
   height: $navHeight;
   width: 100vw;
   ul {
@@ -67,6 +55,18 @@ nav {
     padding: .5rem;
   }
 }
+
+#main-cont {
+  width: 100%;
+  background: $backMed;
+  margin-top: $navHeight;
+  padding: 1em;
+  h2 {
+    margin: 0;
+  }
+}
+
+
 
 /*#degender {
   background: url(../img/degenderSlide.png);

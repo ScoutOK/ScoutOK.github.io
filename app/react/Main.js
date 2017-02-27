@@ -14,11 +14,9 @@ export default class Main extends Component {
     return (
       <div>
         <Navbar />
-        <div id='hor-flex'>
-          <div id='right-cont'>
+        <div id='main-cont'>
               <Projects />
               <Presentations />
-          </div>
         </div>
       </div>
     )

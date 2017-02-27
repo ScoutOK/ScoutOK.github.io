@@ -8,7 +8,7 @@ export default (props) => {
   console.log(projects)
   return (
     <div>
-      <h1>Selected Projects</h1>
+      <h2>Selected Projects</h2>
       {projects.map((project, idx) => {
         return (
           <Project project={project} key={idx}/>
