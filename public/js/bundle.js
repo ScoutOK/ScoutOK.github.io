@@ -9539,37 +9539,41 @@ exports.default = function (props) {
     'nav',
     null,
     _react2.default.createElement(
-      'span',
-      null,
-      'Scout O\'Keefe'
-    ),
-    _react2.default.createElement(
-      'ul',
-      null,
+      'div',
+      { className: 'container' },
       _react2.default.createElement(
-        'li',
+        'span',
         null,
-        'Home'
+        'Scout O\'Keefe'
       ),
       _react2.default.createElement(
-        'li',
+        'ul',
         null,
-        'Projects'
-      ),
-      _react2.default.createElement(
-        'li',
-        null,
-        'Presentations'
-      ),
-      _react2.default.createElement(
-        'li',
-        null,
-        'Design Work'
-      ),
-      _react2.default.createElement(
-        'li',
-        null,
-        'Contact'
+        _react2.default.createElement(
+          'li',
+          null,
+          'Home'
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          'Projects'
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          'Presentations'
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          'Design Work'
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          'Contact'
+        )
       )
     )
   );

@@ -23,9 +23,14 @@ nav {
   nav li {
     display: block;
     padding: .5rem; }
+  nav .container {
+    max-width: 1500px;
+    margin: auto; }
 
 #main-cont {
   width: 100%;
+  max-width: 1500px;
+  margin: auto;
   background: #777;
   margin-top: 3.5em;
   padding: 1em; }

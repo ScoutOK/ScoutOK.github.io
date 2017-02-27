@@ -4,6 +4,7 @@ $backLight: #eee;
 $sidebarWidth: 15%;
 $mainWidth: 70%;
 $navHeight: 3.5em;
+$pageWidth: 1500px;
 
 
 * {
@@ -54,10 +55,16 @@ nav {
     display: block;
     padding: .5rem;
   }
+  .container {
+    max-width: $pageWidth;
+    margin: auto;
+  }
 }
 
 #main-cont {
   width: 100%;
+  max-width: $pageWidth;
+  margin: auto;
   background: $backMed;
   margin-top: $navHeight;
   padding: 1em;
