@@ -9457,6 +9457,10 @@ var _Navbar = __webpack_require__(82);
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
+var _Hero = __webpack_require__(186);
+
+var _Hero2 = _interopRequireDefault(_Hero);
+
 var _Projects = __webpack_require__(85);
 
 var _Projects2 = _interopRequireDefault(_Projects);
@@ -9464,6 +9468,10 @@ var _Projects2 = _interopRequireDefault(_Projects);
 var _Presentations = __webpack_require__(83);
 
 var _Presentations2 = _interopRequireDefault(_Presentations);
+
+var _Transition = __webpack_require__(185);
+
+var _Transition2 = _interopRequireDefault(_Transition);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9495,7 +9503,10 @@ var Main = function (_Component) {
         _react2.default.createElement(
           'div',
           { id: 'main-cont' },
+          _react2.default.createElement(_Hero2.default, null),
+          _react2.default.createElement(_Transition2.default, null),
           _react2.default.createElement(_Projects2.default, null),
+          _react2.default.createElement(_Transition2.default, null),
           _react2.default.createElement(_Presentations2.default, null)
         )
       );
@@ -21997,6 +22008,61 @@ var _Main2 = _interopRequireDefault(_Main);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(_Main2.default, null), document.getElementById('app'));
+
+/***/ }),
+/* 185 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(17);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  return _react2.default.createElement('div', { className: 'arrow-trans' });
+};
+
+/***/ }),
+/* 186 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(17);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  return _react2.default.createElement(
+    'div',
+    { id: 'hero' },
+    _react2.default.createElement(
+      'h1',
+      null,
+      'Scout O\'Keefe'
+    ),
+    _react2.default.createElement(
+      'p',
+      { className: 'tagline' },
+      'Fullstack Javascript Developer and Designer'
+    )
+  );
+};
 
 /***/ })
 /******/ ]);
