@@ -5,6 +5,7 @@ import Hero from './Hero';
 import Projects from './Projects';
 import Presentations from './Presentations';
 import Transition from './Transition';
+import Footer from './Footer';
 
 export default class Main extends Component {
   constructor() {
@@ -23,6 +24,7 @@ export default class Main extends Component {
           <Transition />
           <Presentations />
         </div>
+        <Footer />
       </div>
     )
   }
