@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 
 import Navbar from './Navbar';
+import Hero from './Hero';
 import Projects from './Projects';
 import Presentations from './Presentations';
+import Transition from './Transition';
 
 export default class Main extends Component {
   constructor() {
@@ -15,8 +17,11 @@ export default class Main extends Component {
       <div>
         <Navbar />
         <div id='main-cont'>
-              <Projects />
-              <Presentations />
+          <Hero />
+          <Transition />
+          <Projects />
+          <Transition />
+          <Presentations />
         </div>
       </div>
     )
