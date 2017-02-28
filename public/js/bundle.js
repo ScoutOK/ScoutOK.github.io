@@ -9473,6 +9473,10 @@ var _Transition = __webpack_require__(185);
 
 var _Transition2 = _interopRequireDefault(_Transition);
 
+var _Footer = __webpack_require__(187);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -9507,7 +9511,8 @@ var Main = function (_Component) {
           _react2.default.createElement(_Transition2.default, null),
           _react2.default.createElement(_Projects2.default, null),
           _react2.default.createElement(_Transition2.default, null),
-          _react2.default.createElement(_Presentations2.default, null)
+          _react2.default.createElement(_Presentations2.default, null),
+          _react2.default.createElement(_Footer2.default, null)
         )
       );
     }
@@ -9619,7 +9624,7 @@ exports.default = function (props) {
     _react2.default.createElement(
       'h2',
       null,
-      'Presentation'
+      'Presentations'
     )
   );
 };
@@ -22060,6 +22065,58 @@ exports.default = function () {
       'p',
       { className: 'tagline' },
       'Fullstack Javascript Developer and Designer'
+    )
+  );
+};
+
+/***/ }),
+/* 187 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(17);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  return _react2.default.createElement(
+    'footer',
+    null,
+    _react2.default.createElement(
+      'div',
+      { className: 'social' },
+      _react2.default.createElement(
+        'ul',
+        null,
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement('img', { src: 'public/img/github.svg', alt: 'GitHub' })
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement('img', { src: 'public/img/twitter.svg', alt: 'Twitter' })
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement('img', { src: 'public/img/linkedin.svg', alt: 'LinkedIn' })
+        )
+      )
+    ),
+    _react2.default.createElement(
+      'span',
+      null,
+      '\xA9 2017 Scout O\'Keefe'
     )
   );
 };

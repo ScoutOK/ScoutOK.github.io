@@ -6,7 +6,7 @@ export default (props) => {
   console.log(presentations)
   return (
     <div>
-      <h2>Presentation</h2>
+      <h2>Presentations</h2>
     </div>
   )
 }

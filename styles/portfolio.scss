@@ -1,6 +1,7 @@
 $backDark: #333;
 $backMed: #777;
 $backLight: #eee;
+$foreLight: #eee;
 $sidebarWidth: 15%;
 $mainWidth: 70%;
 $navHeight: 3.5em;
@@ -61,15 +62,25 @@ nav {
   }
 }
 
-#main-cont {
+footer {
   width: 100%;
-  max-width: $pageWidth;
-  margin: auto;
-  background: $backMed;
-  margin-top: $navHeight;
-  padding: 1em;
-  h2 {
+  background: $backDark;
+  color: $foreLight;
+  padding: 3em;
+  h3 {
     margin: 0;
+  }
+  .social {
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    img {
+      width: 3em;
+      padding-right: 1em;
+    }
   }
 }
 
@@ -82,12 +93,17 @@ nav {
   }
 }
 
-
-
-/*#degender {
-  background: url(../img/degenderSlide.png);
-  background-size: cover;
-}*/
+#main-cont {
+  width: 100%;
+  max-width: $pageWidth;
+  margin: auto;
+  background: $backMed;
+  margin-top: $navHeight;
+  //padding: 1em;
+  h2 {
+    margin: 0;
+  }
+}
 
 .project {
   background-size: cover;
