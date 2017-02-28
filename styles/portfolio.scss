@@ -1,13 +1,16 @@
-$backDark: #333;
-$backMed: #777;
-$backLight: #eee;
-$foreLight: #eee;
+$oneDark: #092D1C;
+$oneMed: #377557;
+$oneLight: #D4E7DE;
+$twoDark: #2D2909;
+$twoLight: #D8D2AA;
+$whitish: #eee;
+$blackish: #333;
 $sidebarWidth: 15%;
 $mainWidth: 70%;
 $navHeight: 3.5em;
 $pageWidth: 1500px;
 $baseFont: "Source Sans Pro", sans-serif;
-$heroImage:'../img/landscape1.jpg';
+$heroImage:'../img/landscape2.png';
 
 
 * {
@@ -18,41 +21,22 @@ body {
   padding: 0;
   margin: 0;
   font-family: $baseFont;
-  background: $backDark;
+  background: $oneDark;
 }
 
-// #sidebar {
-//   background: $backLight;
-//   flex-basis: $sidebarWidth;
-//   ul {
-//     list-style: none;
-//     padding: 0;
-//     margin: 0;
-//     width: $sidebarWidth;
-//     //height: calc(100vh - 3em);
-//     position: fixed;
-//     left: 0;
-//     top: calc((100vh - 3em)/2);
-//   }
-//   li {
-//     text-align: center;
-//     padding: 1rem 0;
-//   }
-// }
-
 nav {
-  background-color: $backLight;
+  background-color: $oneLight;
   position: fixed;
   top: 0;
   height: $navHeight;
   width: 100vw;
   z-index: 1000;
+  color: $blackish;
   ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
     margin: auto;
-    width: 60%;
   }
   li {
     display: block;
@@ -66,8 +50,8 @@ nav {
 
 footer {
   width: 100%;
-  background: $backDark;
-  color: $foreLight;
+  background: $oneMed;
+  color: $whitish;
   padding: 3em;
   h3 {
     margin: 0;
@@ -88,21 +72,19 @@ footer {
 
 h2 {
   letter-spacing: .075em;
+  color: $whitish;
 }
 
 h3 {
   letter-spacing: .05em;
-}
-
-#hero-out {
-  position: relative;
+  color: $whitish;
 }
 
 #main-cont {
   width: 100%;
   max-width: $pageWidth;
   margin: $navHeight auto 0;
-  background: $backDark;
+  background: $oneDark;
   margin-top: $navHeight;
   //padding: 1em;
   h2 {
@@ -111,19 +93,20 @@ h3 {
 }
 
 #hero {
-  padding: 15em 0;
-  background: linear-gradient(rgba(51,51,51,.6),rgba(51,51,51,.6)), url($heroImage);
+  padding: 15em 0 0;
+  background: linear-gradient(rgba(9,45,28,.4),rgba(9,45,28,.4)), url($heroImage) center;
+  //filter: grayscale(60%);
   background-size: cover;
-  filter: grayscale(60%);
   .text {
-    color: $foreLight;
-    z-index: 10;
+    color: $whitish;
+    font-size: 1em;
   }
   h1 {
     text-align: center;
     margin-bottom: .2em;
     letter-spacing: .1em;
-    font-weight: 600;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    //font-weight: 500;
     .lower-caps {
       font-size: 75%;
     }
@@ -132,6 +115,15 @@ h3 {
     text-align: center;
     margin: 0;
   }
+  .bottom {
+    height: 15em;
+    background: linear-gradient(rgba(9,45,28,0),rgba(9,45,28,1))
+  }
+}
+
+#hero + .arrow-trans {
+  margin-top: -7.5em;
+  border-top: none;
 }
 
 .project {
@@ -139,7 +131,7 @@ h3 {
 }
 
 .blocker {
-  background: #333;
+  background: $oneMed;
   color: #eee;
   padding: 1rem;
 }
@@ -151,5 +143,7 @@ h3 {
 .arrow-trans {
   width: 100%;
   height: 400px;
-  background: url(../img/arrow.svg) no-repeat center;
+  background: url(../img/arrowLight.svg) no-repeat center;
+  border-top: 1px white solid;
+  border-bottom: 1px white solid;
 }
