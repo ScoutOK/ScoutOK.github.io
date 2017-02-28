@@ -6,6 +6,7 @@ $sidebarWidth: 15%;
 $mainWidth: 70%;
 $navHeight: 3.5em;
 $pageWidth: 1500px;
+$baseFont: "Source Sans Pro", sans-serif;
 
 
 * {
@@ -15,7 +16,7 @@ $pageWidth: 1500px;
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Rambla', sans-serif;
+  font-family: $baseFont;
   background: $backDark;
 }
 
@@ -40,7 +41,6 @@ body {
 
 nav {
   background-color: $backLight;
-  font-family: 'Asul', sans-serif;
   position: fixed;
   top: 0;
   height: $navHeight;
@@ -85,11 +85,19 @@ footer {
 }
 
 #hero {
+  padding: 15em 0;
   h1 {
     text-align: center;
+    margin-bottom: .2em;
+    letter-spacing: .1em;
+    font-weight: 600;
+    .lower-caps {
+      font-size: 75%;
+    }
   }
   .tagline{
     text-align: center;
+    margin: 0;
   }
 }
 

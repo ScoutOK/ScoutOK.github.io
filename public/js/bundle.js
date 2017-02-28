@@ -22059,7 +22059,18 @@ exports.default = function () {
     _react2.default.createElement(
       'h1',
       null,
-      'Scout O\'Keefe'
+      'S',
+      _react2.default.createElement(
+        'span',
+        { className: 'lower-caps' },
+        'COUT'
+      ),
+      ' O\'K',
+      _react2.default.createElement(
+        'span',
+        { className: 'lower-caps' },
+        'EEFE'
+      )
     ),
     _react2.default.createElement(
       'p',
