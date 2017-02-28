@@ -9558,11 +9558,6 @@ exports.default = function (props) {
       'div',
       { className: 'container' },
       _react2.default.createElement(
-        'span',
-        null,
-        'Scout O\'Keefe'
-      ),
-      _react2.default.createElement(
         'ul',
         null,
         _react2.default.createElement(
@@ -9655,7 +9650,7 @@ exports.default = function (props) {
       'div',
       { className: 'blocker' },
       _react2.default.createElement(
-        'h2',
+        'h3',
         null,
         props.project.name
       ),
@@ -22057,14 +22052,29 @@ exports.default = function () {
     'div',
     { id: 'hero' },
     _react2.default.createElement(
-      'h1',
-      null,
-      'Scout O\'Keefe'
-    ),
-    _react2.default.createElement(
-      'p',
-      { className: 'tagline' },
-      'Fullstack Javascript Developer and Designer'
+      'div',
+      { className: 'text' },
+      _react2.default.createElement(
+        'h1',
+        null,
+        'S',
+        _react2.default.createElement(
+          'span',
+          { className: 'lower-caps' },
+          'COUT'
+        ),
+        ' O\'K',
+        _react2.default.createElement(
+          'span',
+          { className: 'lower-caps' },
+          'EEFE'
+        )
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: 'tagline' },
+        'Fullstack Javascript Developer and Designer'
+      )
     )
   );
 };

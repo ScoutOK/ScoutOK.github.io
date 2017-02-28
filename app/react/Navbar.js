@@ -4,7 +4,6 @@ export default (props) => {
   return (
     <nav>
       <div className='container'>
-        <span>Scout O'Keefe</span>
         <ul>
           <li>Home</li>
           <li>Projects</li>

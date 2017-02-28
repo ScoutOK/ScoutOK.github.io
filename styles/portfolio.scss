@@ -6,6 +6,8 @@ $sidebarWidth: 15%;
 $mainWidth: 70%;
 $navHeight: 3.5em;
 $pageWidth: 1500px;
+$baseFont: "Source Sans Pro", sans-serif;
+$heroImage:'../img/landscape1.jpg';
 
 
 * {
@@ -15,7 +17,7 @@ $pageWidth: 1500px;
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Rambla', sans-serif;
+  font-family: $baseFont;
   background: $backDark;
 }
 
@@ -40,11 +42,11 @@ body {
 
 nav {
   background-color: $backLight;
-  font-family: 'Asul', sans-serif;
   position: fixed;
   top: 0;
   height: $navHeight;
   width: 100vw;
+  z-index: 1000;
   ul {
     display: flex;
     list-style: none;
@@ -54,7 +56,7 @@ nav {
   }
   li {
     display: block;
-    padding: .5rem;
+    padding: 2em .5em .5em;
   }
   .container {
     max-width: $pageWidth;
@@ -84,23 +86,50 @@ footer {
   }
 }
 
-#hero {
-  h1 {
-    text-align: center;
-  }
-  .tagline{
-    text-align: center;
-  }
+h2 {
+  letter-spacing: .075em;
+}
+
+h3 {
+  letter-spacing: .05em;
+}
+
+#hero-out {
+  position: relative;
 }
 
 #main-cont {
   width: 100%;
   max-width: $pageWidth;
-  margin: auto;
-  background: $backMed;
+  margin: $navHeight auto 0;
+  background: $backDark;
   margin-top: $navHeight;
   //padding: 1em;
   h2 {
+    margin: 0;
+  }
+}
+
+#hero {
+  padding: 15em 0;
+  background: linear-gradient(rgba(51,51,51,.6),rgba(51,51,51,.6)), url($heroImage);
+  background-size: cover;
+  filter: grayscale(60%);
+  .text {
+    color: $foreLight;
+    z-index: 10;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: .2em;
+    letter-spacing: .1em;
+    font-weight: 600;
+    .lower-caps {
+      font-size: 75%;
+    }
+  }
+  .tagline{
+    text-align: center;
     margin: 0;
   }
 }
