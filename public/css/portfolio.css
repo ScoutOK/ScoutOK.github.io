@@ -27,15 +27,21 @@ nav {
     max-width: 1500px;
     margin: auto; }
 
-#main-cont {
+footer {
   width: 100%;
-  max-width: 1500px;
-  margin: auto;
-  background: #777;
-  margin-top: 3.5em;
-  padding: 1em; }
-  #main-cont h2 {
+  background: #333;
+  color: #eee;
+  padding: 3em; }
+  footer h3 {
     margin: 0; }
+  footer .social ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center; }
+  footer .social img {
+    width: 3em;
+    padding-right: 1em; }
 
 #hero h1 {
   text-align: center; }
@@ -43,10 +49,15 @@ nav {
 #hero .tagline {
   text-align: center; }
 
-/*#degender {
-  background: url(../img/degenderSlide.png);
-  background-size: cover;
-}*/
+#main-cont {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  background: #777;
+  margin-top: 3.5em; }
+  #main-cont h2 {
+    margin: 0; }
+
 .project {
   background-size: cover; }
 

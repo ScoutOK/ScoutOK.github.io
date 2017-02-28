@@ -23,8 +23,8 @@ export default class Main extends Component {
           <Projects />
           <Transition />
           <Presentations />
+          <Footer />
         </div>
-        <Footer />
       </div>
     )
   }
