@@ -7,6 +7,7 @@ $mainWidth: 70%;
 $navHeight: 3.5em;
 $pageWidth: 1500px;
 $baseFont: "Source Sans Pro", sans-serif;
+$heroImage:'../img/landscape1.jpg';
 
 
 * {
@@ -55,7 +56,7 @@ nav {
   }
   li {
     display: block;
-    padding: .5rem;
+    padding: 2em .5em .5em;
   }
   .container {
     max-width: $pageWidth;
@@ -97,12 +98,25 @@ h3 {
   position: relative;
 }
 
+#main-cont {
+  width: 100%;
+  max-width: $pageWidth;
+  margin: $navHeight auto 0;
+  background: $backDark;
+  margin-top: $navHeight;
+  //padding: 1em;
+  h2 {
+    margin: 0;
+  }
+}
+
 #hero {
   padding: 15em 0;
-  background: url(../img/citco.jpg);
+  background: linear-gradient(rgba(51,51,51,.6),rgba(51,51,51,.6)), url($heroImage);
   background-size: cover;
+  filter: grayscale(60%);
   .text {
-    color: white;
+    color: $foreLight;
     z-index: 10;
   }
   h1 {
@@ -116,19 +130,6 @@ h3 {
   }
   .tagline{
     text-align: center;
-    margin: 0;
-  }
-}
-
-
-#main-cont {
-  width: 100%;
-  max-width: $pageWidth;
-  margin: $navHeight auto 0;
-  background: $backDark;
-  margin-top: $navHeight;
-  //padding: 1em;
-  h2 {
     margin: 0;
   }
 }

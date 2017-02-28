@@ -9558,11 +9558,6 @@ exports.default = function (props) {
       'div',
       { className: 'container' },
       _react2.default.createElement(
-        'span',
-        null,
-        'Scout O\'Keefe'
-      ),
-      _react2.default.createElement(
         'ul',
         null,
         _react2.default.createElement(
