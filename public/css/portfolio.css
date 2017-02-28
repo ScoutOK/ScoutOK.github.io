@@ -12,7 +12,8 @@ nav {
   position: fixed;
   top: 0;
   height: 3.5em;
-  width: 100vw; }
+  width: 100vw;
+  z-index: 1000; }
   nav ul {
     display: flex;
     list-style: none;
@@ -42,8 +43,22 @@ footer {
     width: 3em;
     padding-right: 1em; }
 
+h2 {
+  letter-spacing: .075em; }
+
+h3 {
+  letter-spacing: .05em; }
+
+#hero-out {
+  position: relative; }
+
 #hero {
-  padding: 15em 0; }
+  padding: 15em 0;
+  background: url(../img/citco.jpg);
+  background-size: cover; }
+  #hero .text {
+    color: white;
+    z-index: 10; }
   #hero h1 {
     text-align: center;
     margin-bottom: .2em;
@@ -58,8 +73,8 @@ footer {
 #main-cont {
   width: 100%;
   max-width: 1500px;
-  margin: auto;
-  background: #777;
+  margin: 3.5em auto 0;
+  background: #333;
   margin-top: 3.5em; }
   #main-cont h2 {
     margin: 0; }
