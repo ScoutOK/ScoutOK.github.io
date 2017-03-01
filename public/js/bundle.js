@@ -9568,7 +9568,7 @@ exports.default = function (props) {
         null,
         _react2.default.createElement(
           'li',
-          null,
+          { className: 'active' },
           _react2.default.createElement(
             'a',
             { href: '#top' },
