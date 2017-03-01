@@ -22056,16 +22056,15 @@ exports.default = function () {
       { className: 'text' },
       _react2.default.createElement(
         'h1',
-        null,
+        { className: 'text-inner' },
         'Scout O\'Keefe'
       ),
       _react2.default.createElement(
         'p',
-        { className: 'tagline' },
+        { className: 'tagline text-inner' },
         'Fullstack Javascript Developer and Designer'
       )
-    ),
-    _react2.default.createElement('div', { className: 'bottom' })
+    )
   );
 };
 

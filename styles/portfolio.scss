@@ -10,7 +10,7 @@ $mainWidth: 70%;
 $navHeight: 3.5em;
 $pageWidth: 1500px;
 $baseFont: "Source Sans Pro", sans-serif;
-$heroImage:'../img/landscape2.png';
+$heroImage:'../img/jay2.png';
 
 
 * {
@@ -93,31 +93,25 @@ h3 {
 }
 
 #hero {
-  padding: 15em 0 0;
-  background: linear-gradient(rgba(9,45,28,.4),rgba(9,45,28,.4)), url($heroImage) center;
+  padding: 15em 0;
+  background: linear-gradient(rgba(9,45,28,.5) 0%,rgba(9,45,28,.5) 60%, rgba(9,45,28,1) 100%), url($heroImage) center;
   //filter: grayscale(60%);
   background-size: cover;
   .text {
     color: $whitish;
     font-size: 1em;
   }
+  .text-inner {
+    display: table;
+    background: radial-gradient( ellipse, rgba(9,45,28,.75) 0%, rgba(9,45,28,.1) 95%);
+    margin: 0 auto;
+    overflow: visible;
+  }
   h1 {
-    text-align: center;
     margin-bottom: .2em;
     letter-spacing: .1em;
     font-family: 'Alegreya Sans SC', sans-serif;
-    //font-weight: 500;
-    .lower-caps {
-      font-size: 75%;
-    }
-  }
-  .tagline{
-    text-align: center;
-    margin: 0;
-  }
-  .bottom {
-    height: 15em;
-    background: linear-gradient(rgba(9,45,28,0),rgba(9,45,28,1))
+    font-size: 2em;
   }
 }
 
