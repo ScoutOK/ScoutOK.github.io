@@ -9563,27 +9563,47 @@ exports.default = function (props) {
         _react2.default.createElement(
           'li',
           null,
-          'Home'
+          _react2.default.createElement(
+            'a',
+            { href: '#top' },
+            'Home'
+          )
         ),
         _react2.default.createElement(
           'li',
           null,
-          'Projects'
+          _react2.default.createElement(
+            'a',
+            { href: '#projects' },
+            'Projects'
+          )
         ),
         _react2.default.createElement(
           'li',
           null,
-          'Presentations'
+          _react2.default.createElement(
+            'a',
+            { href: '#presentations' },
+            'Presentations'
+          )
         ),
         _react2.default.createElement(
           'li',
           null,
-          'Design Work'
+          _react2.default.createElement(
+            'a',
+            { href: '#design' },
+            'Design Work'
+          )
         ),
         _react2.default.createElement(
           'li',
           null,
-          'Contact'
+          _react2.default.createElement(
+            'a',
+            { href: '#contact' },
+            'Contact'
+          )
         )
       )
     )
