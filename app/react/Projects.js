@@ -7,7 +7,7 @@ import Project from './Project';
 export default (props) => {
   console.log(projects)
   return (
-    <div>
+    <div id='projects'>
       <h2>Selected Projects</h2>
       {projects.map((project, idx) => {
         return (

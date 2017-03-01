@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import Projects from './Projects';
 import Presentations from './Presentations';
+import Designs from './Designs';
 import Transition from './Transition';
 import Footer from './Footer';
 
@@ -15,7 +16,7 @@ export default class Main extends Component {
 
   render () {
     return (
-      <div>
+      <div id='top'>
         <Navbar />
         <div id='main-cont'>
           <Hero />
@@ -23,6 +24,8 @@ export default class Main extends Component {
           <Projects />
           <Transition />
           <Presentations />
+          <Transition />
+          <Designs />
           <Footer />
         </div>
       </div>

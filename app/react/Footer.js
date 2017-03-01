@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => (
-  <footer>
+  <footer id='contact'>
       <div className='social'>
         <ul>
           <li><img src='public/img/github.svg' alt='GitHub'/></li>
