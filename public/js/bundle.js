@@ -9469,6 +9469,10 @@ var _Presentations = __webpack_require__(83);
 
 var _Presentations2 = _interopRequireDefault(_Presentations);
 
+var _Designs = __webpack_require__(188);
+
+var _Designs2 = _interopRequireDefault(_Designs);
+
 var _Transition = __webpack_require__(185);
 
 var _Transition2 = _interopRequireDefault(_Transition);
@@ -9502,7 +9506,7 @@ var Main = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { id: 'top' },
         _react2.default.createElement(_Navbar2.default, null),
         _react2.default.createElement(
           'div',
@@ -9512,6 +9516,8 @@ var Main = function (_Component) {
           _react2.default.createElement(_Projects2.default, null),
           _react2.default.createElement(_Transition2.default, null),
           _react2.default.createElement(_Presentations2.default, null),
+          _react2.default.createElement(_Transition2.default, null),
+          _react2.default.createElement(_Designs2.default, null),
           _react2.default.createElement(_Footer2.default, null)
         )
       );
@@ -9635,7 +9641,7 @@ exports.default = function (props) {
   console.log(_presentations2.default);
   return _react2.default.createElement(
     'div',
-    null,
+    { id: 'presentations' },
     _react2.default.createElement(
       'h2',
       null,
@@ -9723,7 +9729,7 @@ exports.default = function (props) {
   console.log(_projects2.default);
   return _react2.default.createElement(
     'div',
-    null,
+    { id: 'projects' },
     _react2.default.createElement(
       'h2',
       null,
@@ -22108,7 +22114,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function () {
   return _react2.default.createElement(
     'footer',
-    null,
+    { id: 'contact' },
     _react2.default.createElement(
       'div',
       { className: 'social' },
@@ -22136,6 +22142,35 @@ exports.default = function () {
       'span',
       null,
       '\xA9 2017 Scout O\'Keefe'
+    )
+  );
+};
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(17);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (props) {
+  return _react2.default.createElement(
+    'div',
+    { id: 'design' },
+    _react2.default.createElement(
+      'h2',
+      null,
+      'Design Work'
     )
   );
 };
