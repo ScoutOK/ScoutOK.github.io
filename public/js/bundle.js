@@ -9635,18 +9635,25 @@ var _presentations = __webpack_require__(86);
 
 var _presentations2 = _interopRequireDefault(_presentations);
 
+var _Presentation = __webpack_require__(189);
+
+var _Presentation2 = _interopRequireDefault(_Presentation);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function (props) {
   console.log(_presentations2.default);
   return _react2.default.createElement(
-    'div',
+    'section',
     { id: 'presentations' },
     _react2.default.createElement(
       'h2',
       null,
       'Presentations'
-    )
+    ),
+    _presentations2.default.map(function (presentation, idx) {
+      return _react2.default.createElement(_Presentation2.default, { presentation: presentation, key: presentation.id });
+    })
   );
 };
 
@@ -9670,8 +9677,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function (props) {
   return _react2.default.createElement(
     'div',
-    { className: 'project', id: props.project.id, style: { backgroundImage: 'url(' + props.project.image + ')' } },
-    _react2.default.createElement('div', { className: 'picture-frame' }),
+    { className: 'project', id: props.project.id },
+    _react2.default.createElement('div', { className: 'picture-frame', style: { backgroundImage: 'url(' + props.project.image + ')' } }),
     _react2.default.createElement(
       'div',
       { className: 'blocker' },
@@ -9728,7 +9735,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function (props) {
   console.log(_projects2.default);
   return _react2.default.createElement(
-    'div',
+    'section',
     { id: 'projects' },
     _react2.default.createElement(
       'h2',
@@ -9736,7 +9743,7 @@ exports.default = function (props) {
       'Selected Projects'
     ),
     _projects2.default.map(function (project, idx) {
-      return _react2.default.createElement(_Project2.default, { project: project, key: idx });
+      return _react2.default.createElement(_Project2.default, { project: project, key: project.id });
     })
   );
 };
@@ -9749,8 +9756,14 @@ exports.default = function (props) {
 
 
 module.exports = [{
-  name: '',
-  videoUrl: '',
+  id: 1,
+  name: 'Motions',
+  videoUrl: 'https://www.youtube.com/embed/CMZ9WmhWtSc',
+  description: ''
+}, {
+  id: 2,
+  name: 'Degender Your Internet',
+  videoUrl: 'https://www.youtube.com/embed/-bApRMy220w',
   description: ''
 }];
 
@@ -9767,19 +9780,25 @@ module.exports = [{
   image: 'public/img/degenderSlide.png',
   shortText: 'Are you tired of gender thoughts? Do you wish to experience the internet without constently being reminded of your marginalized gender status? This Google Chrome extension will remove and gendered pronouns from your webpages and de-gender any gendered adjectives.',
   status: 'working on version 2.0',
-  technologies: []
+  technologies: [],
+  buttonText: 'Find it at the Chrome Store',
+  buttonUrl: ''
 }, {
   name: 'Motions',
   id: 'motions',
-  image: 'public/img/Motions.png',
+  image: 'public/img/Motions2.png',
   shortText: 'Motions is a motion capture application in which users can record themselves performing an action, then view a 3D model of that action from multiple angles. Using a Microsoft Kinect along with Unity as a game engine, Motions captures a user\'s skeletal data then maps it to a 3D model previously created in Blender. Users can then analyze their movements in a 360° view, allowing for a wide variety of possible use cases.',
-  collabs: 'Rita Bulman, Khristian Brooks, Allie Spatidol'
+  collabs: 'Rita Bulman, Khristian Brooks, Allie Spatidol',
+  buttonText: 'Motions Website',
+  buttonUrl: ''
 }, {
   name: 'Lifting App',
   id: 'lifting',
   image: 'public/img/liftingApp.png',
   shortText: '',
-  status: 'working on version 1.0'
+  status: 'working on version 1.0',
+  buttonText: 'Lifting App GitHub Repository',
+  buttonUrl: ''
 }];
 
 /***/ }),
@@ -22165,12 +22184,56 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = function (props) {
   return _react2.default.createElement(
-    'div',
+    'section',
     { id: 'design' },
     _react2.default.createElement(
       'h2',
       null,
       'Design Work'
+    )
+  );
+};
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(17);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (props) {
+  return _react2.default.createElement(
+    'div',
+    { className: 'presentation', id: props.presentation.id },
+    _react2.default.createElement(
+      'div',
+      { className: 'frame-container' },
+      _react2.default.createElement('iframe', { src: props.presentation.videoUrl, frameBorder: '0', allowFullScreen: true })
+    ),
+    _react2.default.createElement(
+      'h3',
+      null,
+      props.presentation.name
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      props.presentation.description
+    ),
+    _react2.default.createElement(
+      'button',
+      null,
+      'Transcript'
     )
   );
 };

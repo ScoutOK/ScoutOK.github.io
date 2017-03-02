@@ -1,8 +1,8 @@
 import React from 'react'
 
 export default (props) => (
-  <div className='project' id={props.project.id} style={{backgroundImage: `url(${props.project.image})`}}>
-    <div className='picture-frame'></div>
+  <div className='project' id={props.project.id}>
+    <div className='picture-frame' style={{backgroundImage: `url(${props.project.image})`}}></div>
     <div className='blocker'>
       <h3>{props.project.name}</h3>
       <p>{props.project.shortText}</p>
