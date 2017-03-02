@@ -11,10 +11,6 @@ $navHeight: 3.5em;
 $pageWidth: 1500px;
 $baseFont: "Source Sans Pro", sans-serif;
 $heroImage:'../img/jay2.png';
-@mixin aspect-ratio($width) {
-
-  height: 9 * $width / 16;
-}
 
 
 * {
@@ -26,6 +22,20 @@ body {
   margin: 0;
   font-family: $baseFont;
   background: $oneDark;
+}
+
+button {
+  font-size: .9em;
+  border: $oneMed .15em solid;
+  background: none;
+  padding: 1em  1.5em;
+  border-radius: 1.5em;
+  color: $whitish;
+  transition: border-color 0.2s ease,background 0.2s ease;
+  &:hover {
+    background: ($oneDark + $oneMed)/2;
+    border-color: ($oneLight + $oneMed)/2
+  }
 }
 
 nav {
