@@ -7,13 +7,13 @@ import Project from './Project';
 export default (props) => {
   console.log(projects)
   return (
-    <div id='projects'>
+    <section id='projects'>
       <h2>Selected Projects</h2>
       {projects.map((project, idx) => {
         return (
-          <Project project={project} key={idx}/>
+          <Project project={project} key={project.id}/>
         )
       })}
-    </div>
+    </section>
   )
 }
