@@ -7,6 +7,20 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   background: #092D1C; }
 
+button {
+  font-size: .9em;
+  border: #377557 0.15em solid;
+  background: none;
+  padding: 1em 1.25em;
+  border-radius: 1.75em;
+  margin-left: 1em;
+  color: #eee;
+  transition: border-color 0.2s ease,background 0.2s ease; }
+  button:hover {
+    background: #20513a;
+    border-color: #86ae9b;
+    cursor: pointer; }
+
 nav {
   background-color: #D4E7DE;
   position: fixed;
