@@ -5,7 +5,6 @@ import projects from '../../public/data/projects';
 import Project from './Project';
 
 export default (props) => {
-  console.log(projects)
   return (
     <section id='projects'>
       <h2>Selected Projects</h2>

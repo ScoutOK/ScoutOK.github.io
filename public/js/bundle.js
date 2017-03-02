@@ -9642,7 +9642,6 @@ var _Presentation2 = _interopRequireDefault(_Presentation);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function (props) {
-  console.log(_presentations2.default);
   return _react2.default.createElement(
     'section',
     { id: 'presentations' },
@@ -9701,8 +9700,39 @@ exports.default = function (props) {
           'Collaborators:'
         ),
         ' ',
-        props.project.collabs
-      ) : null
+        props.project.collabs.join(', ')
+      ) : null,
+      props.project.technologies ? _react2.default.createElement(
+        'p',
+        null,
+        _react2.default.createElement(
+          'b',
+          null,
+          'Technologies:'
+        ),
+        ' ',
+        props.project.technologies.join(', ')
+      ) : null,
+      _react2.default.createElement(
+        'a',
+        { href: props.project.github },
+        _react2.default.createElement(
+          'button',
+          null,
+          'GitHub'
+        )
+      ),
+      props.project.otherButtons.map(function (button, idx) {
+        return _react2.default.createElement(
+          'a',
+          { href: button.url, key: idx },
+          _react2.default.createElement(
+            'button',
+            null,
+            button.title
+          )
+        );
+      })
     )
   );
 };
@@ -9733,7 +9763,6 @@ var _Project2 = _interopRequireDefault(_Project);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function (props) {
-  console.log(_projects2.default);
   return _react2.default.createElement(
     'section',
     { id: 'projects' },
@@ -9780,25 +9809,36 @@ module.exports = [{
   image: 'public/img/degenderSlide.png',
   shortText: 'Are you tired of gender thoughts? Do you wish to experience the internet without constently being reminded of your marginalized gender status? This Google Chrome extension will remove and gendered pronouns from your webpages and de-gender any gendered adjectives.',
   status: 'working on version 2.0',
-  technologies: [],
-  buttonText: 'Find it at the Chrome Store',
-  buttonUrl: ''
+  technologies: ['React', 'Redux', 'Webpack'],
+  github: '',
+  otherButtons: [{
+    title: 'Chrome Store',
+    url: ''
+  }]
 }, {
   name: 'Motions',
   id: 'motions',
   image: 'public/img/Motions2.png',
   shortText: 'Motions is a motion capture application in which users can record themselves performing an action, then view a 3D model of that action from multiple angles. Using a Microsoft Kinect along with Unity as a game engine, Motions captures a user\'s skeletal data then maps it to a 3D model previously created in Blender. Users can then analyze their movements in a 360° view, allowing for a wide variety of possible use cases.',
-  collabs: 'Rita Bulman, Khristian Brooks, Allie Spatidol',
-  buttonText: 'Motions Website',
-  buttonUrl: ''
+  collabs: ['Rita Bulman', 'Khristian Brooks', 'Allie Spatidol'],
+  technologies: ['Xbox Kinect', 'Unity'],
+  github: '',
+  otherButtons: [{
+    title: 'Website',
+    url: ''
+  }]
 }, {
   name: 'Lifting App',
   id: 'lifting',
   image: 'public/img/liftingApp.png',
   shortText: '',
   status: 'working on version 1.0',
-  buttonText: 'Lifting App GitHub Repository',
-  buttonUrl: ''
+  technologies: ['React Native', 'Realm', 'Firebase'],
+  github: '',
+  otherButtons: [{
+    title: 'iOS App Store',
+    url: ''
+  }]
 }];
 
 /***/ }),

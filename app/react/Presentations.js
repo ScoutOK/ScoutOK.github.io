@@ -5,7 +5,6 @@ import presentations from '../../public/data/presentations';
 import Presentation from './Presentation';
 
 export default (props) => {
-  console.log(presentations)
   return (
     <section id='presentations'>
       <h2>Presentations</h2>
