@@ -9608,9 +9608,13 @@ exports.default = function (props) {
       null,
       'Design Work'
     ),
-    _designs2.default.map(function (design, idx) {
-      return _react2.default.createElement(_Design2.default, { design: design, key: design.id });
-    })
+    _react2.default.createElement(
+      'div',
+      { className: 'flex-design' },
+      _designs2.default.map(function (design, idx) {
+        return _react2.default.createElement(_Design2.default, { design: design, key: design.id });
+      })
+    )
   );
 };
 

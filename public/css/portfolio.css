@@ -111,27 +111,30 @@ section {
   border: #377557 solid 0.1em; }
   section#presentations {
     background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%); }
-  section#designs {
-    display: flex;
-    justify-content: space-between; }
+    section#presentations .frame-container {
+      width: 75%;
+      padding-bottom: 42.1875%;
+      /* 16:9 */
+      position: relative;
+      margin: auto; }
+      section#presentations .frame-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
   section h2 {
     padding: 1em;
     background: #377557; }
-  section .frame-container {
-    width: 75%;
-    padding-bottom: 42.1875%;
-    /* 16:9 */
-    position: relative;
-    margin: auto; }
-    section .frame-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
-  section .design {
-    flex-basis: 33%;
-    border: 0.2em #eee solid; }
+  section .flex-design {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    section .flex-design .design {
+      flex-basis: 29%;
+      border: 0.2em #eee solid; }
+      section .flex-design .design img {
+        max-width: 100%; }
 
 .project {
   background-size: cover;

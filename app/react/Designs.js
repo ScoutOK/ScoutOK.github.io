@@ -8,9 +8,11 @@ export default (props) => {
   return (
     <section id='design'>
       <h2>Design Work</h2>
-      {designs.map((design, idx)=> {
-        return <Design design={design} key={design.id}/>
-      })}
+      <div className='flex-design'>
+        {designs.map((design, idx)=> {
+          return <Design design={design} key={design.id}/>
+        })}
+      </div>
     </section>
   )
 }
