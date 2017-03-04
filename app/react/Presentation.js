@@ -7,6 +7,6 @@ export default (props) => (
     </div>
     <h3>{props.presentation.name}</h3>
     <p>{props.presentation.description}</p>
-    <button>Transcript</button>
+    <a className='button'>Transcript</a>
   </div>
 )

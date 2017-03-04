@@ -24,7 +24,8 @@ body {
   background: $oneDark;
 }
 
-button {
+a.button {
+  text-decoration: none;
   font-size: .9em;
   border: $oneMed .15em solid;
   background: none;
@@ -154,6 +155,10 @@ section {
   &#presentations {
     background: linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%)
   }
+  &#designs {
+    display: flex;
+    justify-content: space-between;
+  }
   h2 {
     padding: 1em;
     background: $oneMed;
@@ -170,6 +175,10 @@ section {
       width: 100%;
       height: 100%;
     }
+  }
+  .design {
+    flex-basis: 33%;
+    border: .2em $whitish solid;
   }
 }
 
