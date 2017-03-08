@@ -9884,6 +9884,8 @@ exports.default = function (props) {
       null,
       'Presentations'
     ),
+    _react2.default.createElement('img', { className: 'slide-arrow left-arrow', src: 'public/img/slideLeft.svg', alt: 'move to previous slide' }),
+    _react2.default.createElement('img', { className: 'slide-arrow right-arrow', src: 'public/img/slideRight.svg', alt: 'move to next slide' }),
     _presentations2.default.map(function (presentation, idx) {
       return _react2.default.createElement(_Presentation2.default, { presentation: presentation, key: presentation.id });
     })

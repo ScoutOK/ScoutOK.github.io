@@ -110,7 +110,8 @@ h3 {
 section {
   border: #D4E7DE solid 0.1em; }
   section#presentations {
-    background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%); }
+    background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%);
+    position: relative; }
     section#presentations .frame-container {
       width: 75%;
       padding-bottom: 42.1875%;
@@ -136,6 +137,15 @@ section {
       section .flex-design .design img {
         max-width: 100%;
         border: 0.1em #eee solid; }
+
+.slide-arrow {
+  position: absolute;
+  width: 4%;
+  margin-top: 17.09375%; }
+  .slide-arrow.left-arrow {
+    left: 4%; }
+  .slide-arrow.right-arrow {
+    right: 4%; }
 
 .project {
   background-size: cover;
