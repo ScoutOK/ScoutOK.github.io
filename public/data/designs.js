@@ -4,7 +4,7 @@ module.exports = [
     name:'Universal Design Case Studies',
     type: 'Website Design',
     year: '2016',
-    image: 'udcasestudies.png',
+    image: 'public/img/udcasestudies.png',
     alt: 'homepage of the website universal design case studies',
   },
   {

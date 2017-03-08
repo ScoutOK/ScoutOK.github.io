@@ -9648,17 +9648,38 @@ exports.default = function () {
         _react2.default.createElement(
           'li',
           null,
-          _react2.default.createElement('img', { src: 'public/img/github.svg', alt: 'GitHub' })
+          _react2.default.createElement(
+            'a',
+            { href: 'http://github.com/scoutok' },
+            _react2.default.createElement('img', { src: 'public/img/github.svg', alt: 'GitHub' })
+          )
         ),
         _react2.default.createElement(
           'li',
           null,
-          _react2.default.createElement('img', { src: 'public/img/twitter.svg', alt: 'Twitter' })
+          _react2.default.createElement(
+            'a',
+            { href: 'http://twitter.com/okscout' },
+            _react2.default.createElement('img', { src: 'public/img/twitter.svg', alt: 'Twitter' })
+          )
         ),
         _react2.default.createElement(
           'li',
           null,
-          _react2.default.createElement('img', { src: 'public/img/linkedin.svg', alt: 'LinkedIn' })
+          _react2.default.createElement(
+            'a',
+            { href: 'http://linkedin.com/in/scoutok/' },
+            _react2.default.createElement('img', { src: 'public/img/linkedin.svg', alt: 'LinkedIn' })
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: 'http://stackoverflow.com/users/7147809/scout-okeefe?tab=profile' },
+            _react2.default.createElement('img', { src: 'public/img/stackoverflow.svg', alt: 'Stack Overflow' })
+          )
         )
       )
     ),
@@ -10015,7 +10036,7 @@ module.exports = [{
   name: 'Universal Design Case Studies',
   type: 'Website Design',
   year: '2016',
-  image: 'udcasestudies.png',
+  image: 'public/img/udcasestudies.png',
   alt: 'homepage of the website universal design case studies'
 }, {
   id: 2,

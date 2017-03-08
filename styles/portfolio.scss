@@ -59,7 +59,7 @@ nav {
   }
   li {
     display: block;
-    padding: 1.5em .5em 1em;
+    padding: 1.5em 2em 1em;
     &.active {
       border-bottom: .2em solid $oneMed;
     }
@@ -177,10 +177,11 @@ section {
     flex-direction: row;
     justify-content: space-between;
     .design {
-      flex-basis: 29%;
-      border: .2em $whitish solid;
+      flex-basis: 33%;
+      padding: 2em;
       img{
         max-width: 100%;
+        border: .1em $whitish solid;
       }
     }
   }
