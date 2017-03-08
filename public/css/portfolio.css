@@ -108,7 +108,7 @@ h3 {
   margin-top: -7.5em; }
 
 section {
-  border: #377557 solid 0.1em; }
+  border: #D4E7DE solid 0.1em; }
   section#presentations {
     background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%); }
     section#presentations .frame-container {
@@ -163,4 +163,5 @@ section {
 .arrow-trans {
   width: 100%;
   height: 400px;
-  background: url(../img/arrowLight.svg) no-repeat center; }
+  background: url(../img/arrowLight.svg) no-repeat center;
+  margin: -2px 0; }

@@ -151,7 +151,7 @@ h3 {
 }
 
 section {
-  border: $oneMed solid .1em;
+  border: $oneLight solid .1em;
   &#presentations {
     background: linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%);
     .frame-container {
@@ -227,6 +227,7 @@ section {
   width: 100%;
   height: 400px;
   background: url(../img/arrowLight.svg) no-repeat center;
+  margin: -2px 0;
   //border-top: 1px white solid;
   //border-bottom: 1px white solid;
 }
