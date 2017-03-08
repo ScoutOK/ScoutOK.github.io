@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default (props) => (
-  <div className='presentation' id={props.presentation.id}>
+  <div className={props.active ? 'presentation active' : 'presentation'} id={props.presentation.id}>
     <div className='frame-container'>
       <iframe src={props.presentation.videoUrl} frameBorder="0" allowFullScreen></iframe>
     </div>

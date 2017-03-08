@@ -108,22 +108,33 @@ h3 {
   margin-top: -7.5em; }
 
 section {
-  border: #D4E7DE solid 0.1em; }
-  section#presentations {
+  border-top: #D4E7DE solid 0.1em;
+  border-bottom: #D4E7DE solid 0.1em; }
+  section#presentations .content {
+    width: 100%;
+    position: relative;
     background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%);
+    padding-bottom: 2em; }
+  section#presentations .presentation {
+    transition: opacity 5s ease-in-out;
+    width: 75%;
+    margin: auto;
+    display: none;
+    opacity: 0; }
+    section#presentations .presentation.active {
+      display: block;
+      opacity: 1; }
+  section#presentations .frame-container {
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 */
     position: relative; }
-    section#presentations .frame-container {
-      width: 75%;
-      padding-bottom: 42.1875%;
-      /* 16:9 */
-      position: relative;
-      margin: auto; }
-      section#presentations .frame-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; }
+    section#presentations .frame-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
   section h2 {
     padding: 1em;
     background: #377557; }
@@ -141,7 +152,9 @@ section {
 .slide-arrow {
   position: absolute;
   width: 4%;
-  margin-top: 17.09375%; }
+  margin-top: 17.09375%;
+  top: 0;
+  cursor: pointer; }
   .slide-arrow.left-arrow {
     left: 4%; }
   .slide-arrow.right-arrow {
