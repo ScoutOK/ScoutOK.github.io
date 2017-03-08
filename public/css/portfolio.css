@@ -7,7 +7,8 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   background: #092D1C; }
 
-button {
+a.button {
+  text-decoration: none;
   font-size: .9em;
   border: #377557 0.15em solid;
   background: none;
@@ -16,7 +17,7 @@ button {
   margin-left: 1em;
   color: #eee;
   transition: border-color 0.2s ease,background 0.2s ease; }
-  button:hover {
+  a.button:hover {
     background: #20513a;
     border-color: #86ae9b;
     cursor: pointer; }
@@ -38,7 +39,7 @@ nav {
     height: 3.5em; }
   nav li {
     display: block;
-    padding: 1.5em .5em 1em; }
+    padding: 1.5em 2em 1em; }
     nav li.active {
       border-bottom: 0.2em solid #377557; }
     nav li a {
@@ -110,21 +111,31 @@ section {
   border: #377557 solid 0.1em; }
   section#presentations {
     background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%); }
+    section#presentations .frame-container {
+      width: 75%;
+      padding-bottom: 42.1875%;
+      /* 16:9 */
+      position: relative;
+      margin: auto; }
+      section#presentations .frame-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
   section h2 {
     padding: 1em;
     background: #377557; }
-  section .frame-container {
-    width: 75%;
-    padding-bottom: 42.1875%;
-    /* 16:9 */
-    position: relative;
-    margin: auto; }
-    section .frame-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
+  section .flex-design {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    section .flex-design .design {
+      flex-basis: 33%;
+      padding: 2em; }
+      section .flex-design .design img {
+        max-width: 100%;
+        border: 0.1em #eee solid; }
 
 .project {
   background-size: cover;
