@@ -9895,20 +9895,24 @@ var Presentations = function (_Component) {
       currSlide: 1,
       slideNum: _presentations2.default.length
     };
+    _this.next = _this.next.bind(_this);
+    _this.prev = _this.prev.bind(_this);
     return _this;
   }
 
   _createClass(Presentations, [{
     key: 'next',
     value: function next(currSlide, slideNum) {
-      console.log('next');
-      if (currSlide < slideNum) this.setState({ currSlide: currSlide++ });else this.setState({ currSlide: 1 });
+      currSlide++;
+      if (currSlide <= slideNum) this.setState({ 'currSlide': currSlide });else this.setState({ currSlide: 1 });
     }
   }, {
     key: 'prev',
     value: function prev(currSlide, slideNum) {
-      console.log('prev');
-      if (currSlide > 1) this.setState({ currSlide: currSlide-- });else this.setState({ currSlide: slideNum });
+      currSlide--;
+      if (function (currSlide) {
+        return 1;
+      }) this.setState({ 'currSlide': currSlide });else this.setState({ currSlide: slideNum });
     }
   }, {
     key: 'render',

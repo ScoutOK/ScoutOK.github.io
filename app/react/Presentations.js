@@ -11,17 +11,19 @@ export default class Presentations extends Component {
       currSlide: 1,
       slideNum: presentations.length
     }
+    this.next = this.next.bind(this);
+    this.prev = this.prev.bind(this);
   }
 
   next (currSlide, slideNum) {
-    console.log('next')
-    if (currSlide < slideNum) this.setState({currSlide: currSlide++});
+    currSlide++
+    if (currSlide <= slideNum) this.setState({'currSlide': currSlide});
     else this.setState({currSlide: 1});
   }
 
   prev (currSlide, slideNum) {
-    console.log('prev')
-    if (currSlide > 1) this.setState({currSlide: currSlide--});
+    currSlide--
+    if (currSlide => 1) this.setState({'currSlide': currSlide});
     else this.setState({currSlide: slideNum});
   }
 
