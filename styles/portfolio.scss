@@ -9,6 +9,7 @@ $sidebarWidth: 15%;
 $mainWidth: 70%;
 $navHeight: 3.5em;
 $pageWidth: 1500px;
+$smallBorder: $oneLight solid .1em;
 $baseFont: "Source Sans Pro", sans-serif;
 $heroImage:'../img/jay2.png';
 
@@ -151,14 +152,30 @@ h3 {
 }
 
 section {
-  border: $oneMed solid .1em;
+  border-top: $smallBorder;
+  border-bottom: $smallBorder;
   &#presentations {
-    background: linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%);
-    .frame-container {
-      width: 75%;
-      padding-bottom: 42.1875%; /* 16:9 */
+    .content {
+      width: 100%;
       position: relative;
+      background: linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%);
+      padding-bottom: 2em;
+    }
+    .presentation {
+      transition: opacity 5s ease-in-out;
+      width: 75%;
       margin: auto;
+      display: none;
+      opacity: 0;
+      &.active {
+        display: block;
+        opacity: 1;
+      }
+    }
+    .frame-container {
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      position: relative;
       iframe {
         position: absolute;
         top: 0;
@@ -185,8 +202,20 @@ section {
       }
     }
   }
+}
 
-  
+.slide-arrow {
+  position: absolute;
+  width: 4%;
+  margin-top: 17.09375%;
+  top: 0;
+  cursor: pointer;
+  &.left-arrow {
+    left: 4%;
+  }
+  &.right-arrow {
+    right: 4%;
+  }
 }
 
 .project {
@@ -227,6 +256,7 @@ section {
   width: 100%;
   height: 400px;
   background: url(../img/arrowLight.svg) no-repeat center;
+  margin: -2px 0;
   //border-top: 1px white solid;
   //border-bottom: 1px white solid;
 }

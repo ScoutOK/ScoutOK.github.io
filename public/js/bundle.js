@@ -9826,7 +9826,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function (props) {
   return _react2.default.createElement(
     'div',
-    { className: 'presentation', id: props.presentation.id },
+    { className: props.active ? 'presentation active' : 'presentation', id: props.presentation.id },
     _react2.default.createElement(
       'div',
       { className: 'frame-container' },
@@ -9861,6 +9861,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(8);
 
 var _react2 = _interopRequireDefault(_react);
@@ -9875,20 +9877,75 @@ var _Presentation2 = _interopRequireDefault(_Presentation);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function (props) {
-  return _react2.default.createElement(
-    'section',
-    { id: 'presentations' },
-    _react2.default.createElement(
-      'h2',
-      null,
-      'Presentations'
-    ),
-    _presentations2.default.map(function (presentation, idx) {
-      return _react2.default.createElement(_Presentation2.default, { presentation: presentation, key: presentation.id });
-    })
-  );
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Presentations = function (_Component) {
+  _inherits(Presentations, _Component);
+
+  function Presentations() {
+    _classCallCheck(this, Presentations);
+
+    var _this = _possibleConstructorReturn(this, (Presentations.__proto__ || Object.getPrototypeOf(Presentations)).call(this));
+
+    _this.state = {
+      currSlide: 1,
+      slideNum: _presentations2.default.length
+    };
+    _this.next = _this.next.bind(_this);
+    _this.prev = _this.prev.bind(_this);
+    return _this;
+  }
+
+  _createClass(Presentations, [{
+    key: 'next',
+    value: function next(currSlide, slideNum) {
+      currSlide++;
+      if (currSlide <= slideNum) this.setState({ currSlide: currSlide });else this.setState({ currSlide: 1 });
+    }
+  }, {
+    key: 'prev',
+    value: function prev(currSlide, slideNum) {
+      currSlide--;
+      if (currSlide >= 1) this.setState({ currSlide: currSlide });else this.setState({ currSlide: slideNum });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'section',
+        { id: 'presentations' },
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Presentations'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'content' },
+          _react2.default.createElement('img', { className: 'slide-arrow left-arrow', src: 'public/img/slideLeft.svg', alt: 'move to previous slide', onClick: function onClick() {
+              _this2.prev(_this2.state.currSlide, _this2.state.slideNum);
+            } }),
+          _presentations2.default.map(function (presentation, idx) {
+            return _react2.default.createElement(_Presentation2.default, { presentation: presentation, key: presentation.id, active: idx === _this2.state.currSlide - 1 });
+          }),
+          _react2.default.createElement('img', { className: 'slide-arrow right-arrow', src: 'public/img/slideRight.svg', alt: 'move to next slide', onClick: function onClick() {
+              _this2.next(_this2.state.currSlide, _this2.state.slideNum);
+            } })
+        )
+      );
+    }
+  }]);
+
+  return Presentations;
+}(_react.Component);
+
+exports.default = Presentations;
 
 /***/ }),
 /* 89 */
