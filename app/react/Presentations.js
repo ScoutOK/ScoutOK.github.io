@@ -17,13 +17,13 @@ export default class Presentations extends Component {
 
   next (currSlide, slideNum) {
     currSlide++
-    if (currSlide <= slideNum) this.setState({'currSlide': currSlide});
+    if (currSlide <= slideNum) this.setState({currSlide: currSlide});
     else this.setState({currSlide: 1});
   }
 
   prev (currSlide, slideNum) {
     currSlide--
-    if (currSlide => 1) this.setState({'currSlide': currSlide});
+    if (currSlide >= 1) this.setState({currSlide: currSlide});
     else this.setState({currSlide: slideNum});
   }
 

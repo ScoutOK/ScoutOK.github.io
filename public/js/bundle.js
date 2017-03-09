@@ -9904,15 +9904,13 @@ var Presentations = function (_Component) {
     key: 'next',
     value: function next(currSlide, slideNum) {
       currSlide++;
-      if (currSlide <= slideNum) this.setState({ 'currSlide': currSlide });else this.setState({ currSlide: 1 });
+      if (currSlide <= slideNum) this.setState({ currSlide: currSlide });else this.setState({ currSlide: 1 });
     }
   }, {
     key: 'prev',
     value: function prev(currSlide, slideNum) {
       currSlide--;
-      if (function (currSlide) {
-        return 1;
-      }) this.setState({ 'currSlide': currSlide });else this.setState({ currSlide: slideNum });
+      if (currSlide >= 1) this.setState({ currSlide: currSlide });else this.setState({ currSlide: slideNum });
     }
   }, {
     key: 'render',
