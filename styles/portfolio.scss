@@ -162,13 +162,13 @@ section {
       padding-bottom: 2em;
     }
     .presentation {
-      transition: opacity 5s ease-in-out;
+      transition: opacity 1s ease-in-out;
       width: 75%;
       margin: auto;
-      display: none;
+      //display: none;
       opacity: 0;
       &.active {
-        display: block;
+        //display: block;
         opacity: 1;
       }
     }

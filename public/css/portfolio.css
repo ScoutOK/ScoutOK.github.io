@@ -116,13 +116,11 @@ section {
     background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%);
     padding-bottom: 2em; }
   section#presentations .presentation {
-    transition: opacity 5s ease-in-out;
+    transition: opacity 1s ease-in-out;
     width: 75%;
     margin: auto;
-    display: none;
     opacity: 0; }
     section#presentations .presentation.active {
-      display: block;
       opacity: 1; }
   section#presentations .frame-container {
     width: 100%;
