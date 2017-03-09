@@ -284,6 +284,7 @@ section {
     background-size: cover;
     height: 20px;
     width: 20px;
+    transition: background .5s ease-in-out;
     &.current{
       background: url(../img/circleFill.svg);
       background-size: cover;
