@@ -34,11 +34,18 @@ a.button {
   border-radius: 1.75em;
   margin-left: 1em;
   color: $whitish;
-  transition: border-color 0.2s ease,background 0.2s ease;
-  &:hover {
+  transition: border-color 0.2s ease, background 0.2s ease;
+  &:hover, &:focus {
     background: ($oneDark + $oneMed)/2;
     border-color: ($oneLight + $oneMed)/2;
     cursor: pointer;
+  }
+  &:active {
+    background: ($oneLight + $oneMed)/2;
+    border-color: $oneDark;
+    cursor: pointer;
+    //font-weight: bold;
+    color: $oneDark;
   }
 }
 
