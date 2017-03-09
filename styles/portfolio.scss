@@ -12,6 +12,9 @@ $pageWidth: 1500px;
 $smallBorder: $oneLight solid .1em;
 $baseFont: "Source Sans Pro", sans-serif;
 $heroImage:'../img/jay2.png';
+$largeBreak: $pageWidth + 1px;
+$xlargeBreak: $pageWidth/.8 + 1px;
+//$xlargeNav: calc(100% - $pageWidth);
 
 
 * {
@@ -23,6 +26,11 @@ body {
   margin: 0;
   font-family: $baseFont;
   background: $oneDark;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
 }
 
 a.button {
@@ -288,5 +296,39 @@ section {
       background: url(../img/circleFill.svg);
       background-size: cover;
     }
+  }
+}
+
+@media screen and (min-width: $largeBreak) {
+  nav {
+    height: 100%;
+    width: 20%;
+    padding: 2em;
+    ul{
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      align-items: flex-end;
+      li {
+        padding: 3em 0 .5em;
+        text-align: right;
+        width: 100%;
+        border-radius: 2px;
+      }
+    }
+  }
+  #main-cont {
+    margin-left: 20%;
+    width: 80%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: $xlargeBreak) {
+  nav {
+    width: calc(100% - 1500px);
+  }
+  #main-cont {
+    margin-left: calc(100% - 1500px);
   }
 }

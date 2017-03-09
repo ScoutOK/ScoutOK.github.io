@@ -9751,55 +9751,51 @@ exports.default = function (props) {
     'nav',
     null,
     _react2.default.createElement(
-      'div',
-      { className: 'container' },
+      'ul',
+      null,
       _react2.default.createElement(
-        'ul',
+        'li',
+        { className: 'active' },
+        _react2.default.createElement(
+          'a',
+          { href: '#top' },
+          'Home'
+        )
+      ),
+      _react2.default.createElement(
+        'li',
         null,
         _react2.default.createElement(
-          'li',
-          { className: 'active' },
-          _react2.default.createElement(
-            'a',
-            { href: '#top' },
-            'Home'
-          )
-        ),
+          'a',
+          { href: '#projects' },
+          'Projects'
+        )
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
         _react2.default.createElement(
-          'li',
-          null,
-          _react2.default.createElement(
-            'a',
-            { href: '#projects' },
-            'Projects'
-          )
-        ),
+          'a',
+          { href: '#presentations' },
+          'Presentations'
+        )
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
         _react2.default.createElement(
-          'li',
-          null,
-          _react2.default.createElement(
-            'a',
-            { href: '#presentations' },
-            'Presentations'
-          )
-        ),
+          'a',
+          { href: '#design' },
+          'Design Work'
+        )
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
         _react2.default.createElement(
-          'li',
-          null,
-          _react2.default.createElement(
-            'a',
-            { href: '#design' },
-            'Design Work'
-          )
-        ),
-        _react2.default.createElement(
-          'li',
-          null,
-          _react2.default.createElement(
-            'a',
-            { href: '#contact' },
-            'Contact'
-          )
+          'a',
+          { href: '#contact' },
+          'Contact'
         )
       )
     )
