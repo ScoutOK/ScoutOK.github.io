@@ -178,6 +178,9 @@ section {
         display: block;
         opacity: 1;
       }
+      h3 {
+        margin-top: calc(1em + 20px);
+      }
     }
     .frame-container {
       width: 100%;
@@ -266,4 +269,24 @@ section {
   margin: -2px 0;
   //border-top: 1px white solid;
   //border-bottom: 1px white solid;
+}
+
+#pres-dots{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  margin-top: calc(42.1875% + .5em);
+  .dot{
+    background: url(../img/circleDonut.svg);
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    &.current{
+      background: url(../img/circleFill.svg);
+      background-size: cover;
+    }
+  }
 }
