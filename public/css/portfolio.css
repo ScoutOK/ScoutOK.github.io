@@ -7,6 +7,10 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   background: #092D1C; }
 
+#app {
+  width: 100%;
+  height: 100%; }
+
 a.button {
   text-decoration: none;
   font-size: .9em;
@@ -212,3 +216,29 @@ section {
     #pres-dots .dot.current {
       background: url(../img/circleFill.svg);
       background-size: cover; }
+
+@media screen and (min-width: 1501px) {
+  nav {
+    height: 100%;
+    width: 20%;
+    padding: 2em; }
+    nav ul {
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      align-items: flex-end; }
+      nav ul li {
+        padding: 3em 0 .5em;
+        text-align: right;
+        width: 100%;
+        border-radius: 2px; }
+  #main-cont {
+    margin-left: 20%;
+    width: 80%;
+    margin-top: 0; } }
+
+@media screen and (min-width: 1876px) {
+  nav {
+    width: calc(100% - 1500px); }
+  #main-cont {
+    margin-left: calc(100% - 1500px); } }
