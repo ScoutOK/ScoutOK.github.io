@@ -9680,6 +9680,15 @@ exports.default = function () {
             { href: 'http://stackoverflow.com/users/7147809/scout-okeefe?tab=profile' },
             _react2.default.createElement('img', { src: 'public/img/stackoverflow.svg', alt: 'Stack Overflow' })
           )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: 'http://codepen.io/scoutok/' },
+            _react2.default.createElement('img', { src: 'public/img/codepen.svg', alt: 'Code Pen' })
+          )
         )
       )
     ),
