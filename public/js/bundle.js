@@ -9934,6 +9934,13 @@ var Presentations = function (_Component) {
           _presentations2.default.map(function (presentation, idx) {
             return _react2.default.createElement(_Presentation2.default, { presentation: presentation, key: presentation.id, active: idx === _this2.state.currSlide - 1 });
           }),
+          _react2.default.createElement(
+            'div',
+            { id: 'pres-dots' },
+            _presentations2.default.map(function (presentation, idx) {
+              return _react2.default.createElement('div', { className: idx + 1 === _this2.state.currSlide ? 'dot current' : 'dot', key: idx });
+            })
+          ),
           _react2.default.createElement('img', { className: 'slide-arrow right-arrow', src: 'public/img/slideRight.svg', alt: 'move to next slide', onClick: function onClick() {
               _this2.next(_this2.state.currSlide, _this2.state.slideNum);
             } })
