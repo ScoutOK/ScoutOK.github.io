@@ -93,12 +93,14 @@ nav {
         height: .2em;
         border-radius: .1em;
         margin-top: .5em;
-        transition: background 2s ease;
+        transition: opacity .5s ease-in-out;
+        opacity: 0;
         position: absolute;
         bottom: 0;
+        background: linear-gradient(90deg, rgba(55,117,87,.6) 0%, rgba(45,41,9, .8) 33%, rgba(45,41,9, .9) 50%, rgba(45,41,9, .8) 66%, rgba(55,117,87,.6) 100%);
       }
       &.active .underline{
-        background: linear-gradient(90deg, rgba(55,117,87,.6) 0%, rgba(45,41,9, .9) 50%, rgba(55,117,87,.6) 100%);
+        opacity: 1;
       }
     }
   }
@@ -337,16 +339,7 @@ section {
             margin: 0;
             text-align: right;
           }
-          .underline {
-            width: 100%;
-            height: .2em;
-            border-radius: .1em;
-            margin-top: .5em;
-            transition: background 2s ease;
-            position: absolute;
-            bottom: 0;
-          }
-          &.active .underline{
+          .underline{
             background: linear-gradient(90deg, rgba(55,117,87,.4) 0%, rgba(45,41,9, .9) 100%);
           }
         }
