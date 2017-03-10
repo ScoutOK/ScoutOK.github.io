@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import presentations from '../../public/data/presentations';
 
 import Presentation from './Presentation';
+import Transition from './Transition';
 
 export default class Presentations extends Component {
   constructor (){
@@ -47,6 +48,7 @@ export default class Presentations extends Component {
         </div>
         <img className='slide-arrow right-arrow' src='public/img/slideRight.svg' alt='move to next slide' onClick={()=>{this.next(this.state.currSlide, this.state.slideNum)}}/>
       </div>
+      <Transition />
     </section>
   )
   }

@@ -9514,9 +9514,7 @@ var Main = function (_Component) {
           _react2.default.createElement(_Hero2.default, null),
           _react2.default.createElement(_Transition2.default, null),
           _react2.default.createElement(_Projects2.default, null),
-          _react2.default.createElement(_Transition2.default, null),
           _react2.default.createElement(_Presentations2.default, null),
-          _react2.default.createElement(_Transition2.default, null),
           _react2.default.createElement(_Designs2.default, null),
           _react2.default.createElement(_Footer2.default, null)
         )
@@ -9597,6 +9595,10 @@ var _Design = __webpack_require__(82);
 
 var _Design2 = _interopRequireDefault(_Design);
 
+var _Transition = __webpack_require__(91);
+
+var _Transition2 = _interopRequireDefault(_Transition);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function (props) {
@@ -9610,11 +9612,12 @@ exports.default = function (props) {
     ),
     _react2.default.createElement(
       'div',
-      { className: 'flex-design' },
+      { className: 'flex-design content' },
       _designs2.default.map(function (design, idx) {
         return _react2.default.createElement(_Design2.default, { design: design, key: design.id });
       })
-    )
+    ),
+    _react2.default.createElement(_Transition2.default, null)
   );
 };
 
@@ -9884,6 +9887,10 @@ var _Presentation = __webpack_require__(87);
 
 var _Presentation2 = _interopRequireDefault(_Presentation);
 
+var _Transition = __webpack_require__(91);
+
+var _Transition2 = _interopRequireDefault(_Transition);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -9953,7 +9960,8 @@ var Presentations = function (_Component) {
           _react2.default.createElement('img', { className: 'slide-arrow right-arrow', src: 'public/img/slideRight.svg', alt: 'move to next slide', onClick: function onClick() {
               _this2.next(_this2.state.currSlide, _this2.state.slideNum);
             } })
-        )
+        ),
+        _react2.default.createElement(_Transition2.default, null)
       );
     }
   }]);
@@ -10059,6 +10067,10 @@ var _Project = __webpack_require__(89);
 
 var _Project2 = _interopRequireDefault(_Project);
 
+var _Transition = __webpack_require__(91);
+
+var _Transition2 = _interopRequireDefault(_Transition);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function (props) {
@@ -10070,9 +10082,14 @@ exports.default = function (props) {
       null,
       'Selected Projects'
     ),
-    _projects2.default.map(function (project, idx) {
-      return _react2.default.createElement(_Project2.default, { project: project, key: project.id });
-    })
+    _react2.default.createElement(
+      'div',
+      { className: 'content' },
+      _projects2.default.map(function (project, idx) {
+        return _react2.default.createElement(_Project2.default, { project: project, key: project.id });
+      })
+    ),
+    _react2.default.createElement(_Transition2.default, null)
   );
 };
 

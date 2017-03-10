@@ -68,7 +68,8 @@ footer {
   width: 100%;
   background: #377557;
   color: #eee;
-  padding: 3em; }
+  padding: 3em;
+  border-top: #D4E7DE solid 0.1em; }
   footer h3 {
     margin: 0; }
   footer .social ul {
@@ -119,10 +120,11 @@ h3 {
   margin-top: -7.5em; }
 
 section {
-  border-top: #D4E7DE solid 0.1em;
-  border-bottom: #D4E7DE solid 0.1em; }
-  section#presentations .content {
+  border-top: #D4E7DE solid 0.1em; }
+  section .content {
     width: 100%;
+    border-bottom: #D4E7DE solid 0.1em; }
+  section#presentations .content {
     position: relative;
     background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%);
     padding-bottom: 2em; }

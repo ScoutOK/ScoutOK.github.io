@@ -102,6 +102,7 @@ footer {
   background: $oneMed;
   color: $whitish;
   padding: 3em;
+  border-top: $smallBorder;
   h3 {
     margin: 0;
   }
@@ -171,10 +172,12 @@ h3 {
 
 section {
   border-top: $smallBorder;
-  border-bottom: $smallBorder;
+  .content {
+    width: 100%;
+    border-bottom: $smallBorder;
+  }
   &#presentations {
     .content {
-      width: 100%;
       position: relative;
       background: linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%);
       padding-bottom: 2em;
