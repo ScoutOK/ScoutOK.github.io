@@ -26,6 +26,9 @@ body {
   margin: 0;
   font-family: $baseFont;
   background: $oneDark;
+  &.smooth-scroll{
+    background: blue;
+  }
 }
 
 #app {
