@@ -49,17 +49,17 @@ nav {
     margin: auto;
     height: 3.5em; }
   nav li {
-    display: block;
-    padding: 1.5em 2em 1em; }
-    nav li.active {
-      border-bottom: 0.2em solid #377557; }
+    display: block; }
     nav li a {
       display: block;
+      padding: 1.5em 2em 1em;
       width: 100%;
       height: 100%;
       text-decoration: none;
       color: #2D2909;
       font-weight: bold; }
+      nav li a.active {
+        border-bottom: 0.2em solid #377557; }
   nav .container {
     max-width: 1500px;
     margin: auto; }

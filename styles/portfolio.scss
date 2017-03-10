@@ -78,17 +78,17 @@ nav {
   }
   li {
     display: block;
-    padding: 1.5em 2em 1em;
-    &.active {
-      border-bottom: .2em solid $oneMed;
-    }
     a {
       display: block;
+      padding: 1.5em 2em 1em;
       width: 100%;
       height: 100%;
       text-decoration: none;
       color: $twoDark;
       font-weight: bold;
+      &.active {
+        border-bottom: .2em solid $oneMed;
+      }
     }
   }
   .container {
