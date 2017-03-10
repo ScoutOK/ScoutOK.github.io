@@ -22,9 +22,7 @@ export default class Main extends Component {
           <Hero />
           <Transition />
           <Projects />
-          <Transition />
           <Presentations />
-          <Transition />
           <Designs />
           <Footer />
         </div>
