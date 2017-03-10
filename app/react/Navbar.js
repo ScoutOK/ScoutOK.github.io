@@ -6,11 +6,36 @@ export default (props) => {
   return (
     <nav>
       <ul>
-        <li><Link activeClass='active' to='top' spy={true} smooth={true}>Home</Link></li>
-        <li><Link activeClass='active' to='projects' spy={true} smooth={true}>Projects</Link></li>
-        <li><Link activeClass='active' to='presentations' spy={true} smooth={true}>Presentations</Link></li>
-        <li><Link activeClass='active' to='design' spy={true} smooth={true}>Design Work</Link></li>
-        <li><Link activeClass='active' to='contact' spy={true} smooth={true}>Contact</Link></li>
+        <li>
+          <Link activeClass='active' to='top' spy={true} smooth={true}>
+            <span>Home</span>
+            <div className='underline'></div>
+          </Link>
+        </li>
+        <li>
+          <Link activeClass='active' to='projects' spy={true} smooth={true}>
+            <span>Projects</span>
+            <div className='underline'></div>
+          </Link>
+        </li>
+        <li>
+          <Link activeClass='active' to='presentations' spy={true} smooth={true}>
+            <span>Presentations</span>
+            <div className='underline'></div>
+          </Link>
+        </li>
+        <li>
+          <Link activeClass='active' to='design' spy={true} smooth={true}>
+            <span>Design Work</span>
+            <div className='underline'></div>
+          </Link>
+        </li>
+        <li>
+          <Link activeClass='active' to='contact' spy={true} smooth={true}>
+            <span>Contact</span>
+            <div className='underline'></div>
+          </Link>
+        </li>
       </ul>
     </nav>
   )

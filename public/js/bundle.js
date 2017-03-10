@@ -9775,7 +9775,12 @@ exports.default = function (props) {
         _react2.default.createElement(
           _reactScroll.Link,
           { activeClass: 'active', to: 'top', spy: true, smooth: true },
-          'Home'
+          _react2.default.createElement(
+            'span',
+            null,
+            'Home'
+          ),
+          _react2.default.createElement('div', { className: 'underline' })
         )
       ),
       _react2.default.createElement(
@@ -9784,7 +9789,12 @@ exports.default = function (props) {
         _react2.default.createElement(
           _reactScroll.Link,
           { activeClass: 'active', to: 'projects', spy: true, smooth: true },
-          'Projects'
+          _react2.default.createElement(
+            'span',
+            null,
+            'Projects'
+          ),
+          _react2.default.createElement('div', { className: 'underline' })
         )
       ),
       _react2.default.createElement(
@@ -9793,7 +9803,12 @@ exports.default = function (props) {
         _react2.default.createElement(
           _reactScroll.Link,
           { activeClass: 'active', to: 'presentations', spy: true, smooth: true },
-          'Presentations'
+          _react2.default.createElement(
+            'span',
+            null,
+            'Presentations'
+          ),
+          _react2.default.createElement('div', { className: 'underline' })
         )
       ),
       _react2.default.createElement(
@@ -9802,7 +9817,12 @@ exports.default = function (props) {
         _react2.default.createElement(
           _reactScroll.Link,
           { activeClass: 'active', to: 'design', spy: true, smooth: true },
-          'Design Work'
+          _react2.default.createElement(
+            'span',
+            null,
+            'Design Work'
+          ),
+          _react2.default.createElement('div', { className: 'underline' })
         )
       ),
       _react2.default.createElement(
@@ -9811,7 +9831,12 @@ exports.default = function (props) {
         _react2.default.createElement(
           _reactScroll.Link,
           { activeClass: 'active', to: 'contact', spy: true, smooth: true },
-          'Contact'
+          _react2.default.createElement(
+            'span',
+            null,
+            'Contact'
+          ),
+          _react2.default.createElement('div', { className: 'underline' })
         )
       )
     )
