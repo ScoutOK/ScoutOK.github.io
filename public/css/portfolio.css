@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 * {
   box-sizing: border-box; }
 
@@ -164,10 +174,13 @@ section {
     transition: opacity 1s ease-in-out;
     width: 75%;
     margin: auto;
+    display: none;
     opacity: 0;
     color: #eee; }
     section#presentations .presentation.active {
-      opacity: 1; }
+      display: block;
+      opacity: 1;
+      animation: fadeIn 1s ease-in-out; }
     section#presentations .presentation h3 {
       margin-top: calc(1em + 20px); }
     section#presentations .presentation p {
