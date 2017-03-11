@@ -16,6 +16,20 @@ $largeBreak: $pageWidth + 1px;
 $xlargeBreak: $pageWidth/.8 + 1px;
 //$xlargeNav: calc(100% - $pageWidth);
 
+@keyframes fadeIn{
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 * {
   box-sizing: border-box;
@@ -219,7 +233,7 @@ section {
       padding-bottom: 2em;
     }
     .presentation {
-      transition: opacity 5s ease-in-out;
+      transition: opacity 1s ease-in-out;
       width: 75%;
       margin: auto;
       display: none;
@@ -228,6 +242,7 @@ section {
       &.active {
         display: block;
         opacity: 1;
+        animation: fadeIn 1s ease-in-out;
       }
       h3 {
         margin-top: calc(1em + 20px);

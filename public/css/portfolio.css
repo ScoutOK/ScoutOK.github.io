@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 * {
   box-sizing: border-box; }
 
@@ -161,7 +171,7 @@ section {
     background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%);
     padding-bottom: 2em; }
   section#presentations .presentation {
-    transition: opacity 5s ease-in-out;
+    transition: opacity 1s ease-in-out;
     width: 75%;
     margin: auto;
     display: none;
@@ -169,7 +179,8 @@ section {
     color: #eee; }
     section#presentations .presentation.active {
       display: block;
-      opacity: 1; }
+      opacity: 1;
+      animation: fadeIn 1s ease-in-out; }
     section#presentations .presentation h3 {
       margin-top: calc(1em + 20px); }
     section#presentations .presentation p {
