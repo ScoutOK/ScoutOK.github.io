@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import presentations from '../../public/data/presentations';
 
 import Presentation from './Presentation';
+import Transition from './Transition';
 
 export default class Presentations extends Component {
   constructor (){
@@ -28,6 +29,7 @@ export default class Presentations extends Component {
   }
 
   render () {
+
   return (
     <section id='presentations'>
       <h2>Presentations</h2>
@@ -36,8 +38,17 @@ export default class Presentations extends Component {
         {presentations.map((presentation, idx)=> {
           return <Presentation presentation={presentation} key={presentation.id} active={idx === this.state.currSlide - 1}/>
         })}
+        <div id='pres-dots'>
+          {presentations.map((presentation, idx)=>{
+            return (
+              <div className={idx+1 === this.state.currSlide ? 'dot current': 'dot'} key={idx}>
+              </div>
+            )
+          })}
+        </div>
         <img className='slide-arrow right-arrow' src='public/img/slideRight.svg' alt='move to next slide' onClick={()=>{this.next(this.state.currSlide, this.state.slideNum)}}/>
       </div>
+      <Transition />
     </section>
   )
   }

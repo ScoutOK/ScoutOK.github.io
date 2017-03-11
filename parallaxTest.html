@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3-webkit-overflow-fix/ -->
+<html class="gr__keithclark_co_uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>A grouped pure CSS parallax demo (with webkit overflow fix) by Keith Clark</title>
+<style>
+
+  /* Parallax base styles
+  --------------------------------------------- */
+
+  .parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    -webkit-perspective-origin-x: 100%;
+    perspective-origin-x: 100%;
+  }
+
+  .parallax__group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform-origin-x: 100%;
+    transform-origin-x: 100%;
+  }
+
+  .parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
+
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
+
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
+
+  .parallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+  }
+
+
+  /* demo styles
+  --------------------------------------------- */
+
+
+  /* style the groups
+  --------------------------------------------- */
+.background {
+  background: url('public/img/jay2.png') center;
+  background-size: cover;
+}
+.text {
+  margin: 15em 0;
+}
+</style>
+</head>
+
+<body data-gr-c-s-loaded="true" data-feedly-mini="yes">
+  <div class='parallax'>
+    <div class='parallax__group'>
+      <div class='background parallax__layer parallax__layer--back'></div>
+      <div class='text parallax__layer parallax__layer--base'>
+        <h1 class='text-inner'>Scout O'Keefe</h1>
+        <p class='tagline text-inner'>Fullstack Javascript Developer and Designer</p>
+      </div>
+    </div>
+  </div>
+  <div class='parallax'>
+    <div class='parallax__group'>
+      <div class='background parallax__layer parallax__layer--back'></div>
+      <div class='text parallax__layer parallax__layer--base'>
+        <h1 class='text-inner'>Scout O'Keefe</h1>
+        <p class='tagline text-inner'>Fullstack Javascript Developer and Designer</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
