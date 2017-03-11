@@ -9726,16 +9726,21 @@ exports.default = function () {
     { id: 'hero' },
     _react2.default.createElement(
       'div',
-      { className: 'text' },
+      { className: 'hero-grouping' },
+      _react2.default.createElement('div', { className: 'background layer' }),
       _react2.default.createElement(
-        'h1',
-        { className: 'text-inner' },
-        'Scout O\'Keefe'
-      ),
-      _react2.default.createElement(
-        'p',
-        { className: 'tagline text-inner' },
-        'Fullstack Javascript Developer and Designer'
+        'div',
+        { className: 'text layer' },
+        _react2.default.createElement(
+          'h1',
+          { className: 'text-inner' },
+          'Scout O\'Keefe'
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'tagline text-inner' },
+          'Fullstack Javascript Developer and Designer'
+        )
       )
     )
   );
