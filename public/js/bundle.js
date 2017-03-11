@@ -10025,7 +10025,7 @@ exports.default = function (props) {
     _react2.default.createElement('div', { className: 'picture-frame', style: { backgroundImage: 'url(' + props.project.image + ')' } }),
     _react2.default.createElement(
       'div',
-      { className: 'blocker' },
+      { className: 'text' },
       _react2.default.createElement(
         'h3',
         null,
