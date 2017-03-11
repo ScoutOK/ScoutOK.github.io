@@ -22,6 +22,7 @@ body {
   height: 100%; }
 
 a.button {
+  display: inline-block;
   text-decoration: none;
   font-size: .9em;
   border: #377557 0.15em solid;
@@ -82,9 +83,6 @@ nav {
         background: linear-gradient(90deg, rgba(55, 117, 87, 0.6) 0%, rgba(45, 41, 9, 0.8) 33%, rgba(45, 41, 9, 0.9) 50%, rgba(45, 41, 9, 0.8) 66%, rgba(55, 117, 87, 0.6) 100%); }
       nav li a.active .underline {
         opacity: 1; }
-  nav .container {
-    max-width: 1500px;
-    margin: auto; }
 
 footer {
   width: 100%;
@@ -166,36 +164,6 @@ section {
   section .content {
     width: 100%;
     border-bottom: #D4E7DE solid 0.1em; }
-  section#presentations .content {
-    position: relative;
-    background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%);
-    padding-bottom: 2em; }
-  section#presentations .presentation {
-    transition: opacity 1s ease-in-out;
-    width: 75%;
-    margin: auto;
-    display: none;
-    opacity: 0;
-    color: #eee; }
-    section#presentations .presentation.active {
-      display: block;
-      opacity: 1;
-      animation: fadeIn 1s ease-in-out; }
-    section#presentations .presentation h3 {
-      margin-top: calc(1em + 20px); }
-    section#presentations .presentation p {
-      margin-bottom: 2em; }
-  section#presentations .frame-container {
-    width: 100%;
-    padding-bottom: 56.25%;
-    /* 16:9 */
-    position: relative; }
-    section#presentations .frame-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
   section h2 {
     padding: 1em;
     background: #377557; }
@@ -209,6 +177,39 @@ section {
       section .flex-design .design img {
         max-width: 100%;
         border: 0.1em #eee solid; }
+
+#presentations .content {
+  position: relative;
+  background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%);
+  padding-bottom: 2em; }
+
+#presentations .presentation {
+  transition: opacity 1s ease-in-out;
+  width: 75%;
+  margin: auto;
+  display: none;
+  opacity: 0;
+  color: #eee; }
+  #presentations .presentation.active {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 1s ease-in-out; }
+  #presentations .presentation h3 {
+    margin-top: calc(1em + 20px); }
+  #presentations .presentation p {
+    margin-bottom: 1em; }
+
+#presentations .frame-container {
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  position: relative; }
+  #presentations .frame-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 .slide-arrow {
   position: absolute;
@@ -227,22 +228,22 @@ section {
   width: 100%; }
   .project:nth-child(odd) {
     background: rgba(55, 117, 87, 0.15); }
-
-.blocker {
-  color: #eee;
-  flex-basis: 70%;
-  min-height: 15em; }
-  .blocker h3 {
-    padding: 1em;
-    margin: 0; }
-  .blocker p {
-    padding: 1em;
-    margin: 0; }
-
-.picture-frame {
-  flex-basis: 30%;
-  background-size: cover;
-  background-position: center 0; }
+  .project .text {
+    color: #eee;
+    flex-basis: 70%;
+    min-height: 15em;
+    padding: 2em 2em 3em; }
+    .project .text h3 {
+      padding: 1em;
+      margin: 0; }
+    .project .text p {
+      padding: 1em;
+      margin: 0; }
+  .project .picture-frame {
+    flex-basis: 30%;
+    background-size: cover;
+    background-position: center 0;
+    box-shadow: inset 0px 0px 36px 0px rgba(9, 45, 28, 0.75); }
 
 .arrow-trans {
   width: 100%;
