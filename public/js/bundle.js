@@ -9604,7 +9604,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function (props) {
   return _react2.default.createElement(
     'section',
-    { id: 'design' },
+    { id: 'designs' },
     _react2.default.createElement(
       'h2',
       null,
@@ -9726,16 +9726,21 @@ exports.default = function () {
     { id: 'hero' },
     _react2.default.createElement(
       'div',
-      { className: 'text' },
+      { className: 'hero-grouping' },
+      _react2.default.createElement('div', { className: 'background layer' }),
       _react2.default.createElement(
-        'h1',
-        { className: 'text-inner' },
-        'Scout O\'Keefe'
-      ),
-      _react2.default.createElement(
-        'p',
-        { className: 'tagline text-inner' },
-        'Fullstack Javascript Developer and Designer'
+        'div',
+        { className: 'text layer' },
+        _react2.default.createElement(
+          'h1',
+          { className: 'text-inner' },
+          'Scout O\'Keefe'
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'tagline text-inner' },
+          'Fullstack Javascript Developer and Designer'
+        )
       )
     )
   );
@@ -9816,7 +9821,7 @@ exports.default = function (props) {
         null,
         _react2.default.createElement(
           _reactScroll.Link,
-          { activeClass: 'active', to: 'design', spy: true, smooth: true },
+          { activeClass: 'active', to: 'designs', spy: true, smooth: true },
           _react2.default.createElement(
             'span',
             null,

@@ -155,18 +155,38 @@ h3 {
   }
 }
 
+//parallax scrolling on this section adapted from Keith Clark http://keithclark.co.uk/articles/pure-css-parallax-websites/
 #hero {
-  padding: 15em 0;
-  background: linear-gradient(rgba(9,45,28,.5) 0%,rgba(9,45,28,.5) 60%, rgba(9,45,28,1) 100%), url($heroImage) center;
-  //filter: grayscale(60%);
-  background-size: cover;
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+  perspective-origin-x: 100%;
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform-origin-x: 100%;
+  }
+  .background {
+    background: linear-gradient(rgba(9,45,28,.5) 0%,rgba(9,45,28,.5) 60%, rgba(9,45,28,1) 100%), url($heroImage) center;
+    background-size: cover;
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
   .text {
+    background: radial-gradient( ellipse, rgba(9,45,28,.75) 0%, rgba(9,45,28,.1) 20%);
+    padding: 15em 0;
     color: $whitish;
     font-size: 1em;
+    transform: translateZ(0);
+    z-index: 4;
   }
   .text-inner {
     display: table;
-    background: radial-gradient( ellipse, rgba(9,45,28,.75) 0%, rgba(9,45,28,.1) 95%);
     margin: 0 auto;
     overflow: visible;
   }
@@ -179,7 +199,10 @@ h3 {
 }
 
 #hero + .arrow-trans {
-  margin-top: -7.5em;
+  margin-top: -20em;
+  transform: translateZ(90px);
+  z-index: 1;
+  //background: $oneDark, url(../img/arrowLight.svg) no-repeat center;
   //border-top: none;
 }
 
