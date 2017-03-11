@@ -241,8 +241,9 @@ section {
   justify-content: space-between;
   padding: 3em; }
   #designs .flex-design .design {
-    flex-basis: 33%;
-    padding: 2em; }
+    flex-basis: 33%; }
+    #designs .flex-design .design:nth-child(3n - 1) {
+      margin: 0 3em; }
     #designs .flex-design .design img {
       max-width: 100%;
       border: 0.1em #eee solid; }
