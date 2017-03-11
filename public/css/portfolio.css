@@ -232,7 +232,7 @@ section {
     color: #eee;
     flex-basis: 70%;
     min-height: 15em;
-    padding-bottom: 1em; }
+    padding: 2em 2em 3em; }
     .project .text h3 {
       padding: 1em;
       margin: 0; }
@@ -242,7 +242,8 @@ section {
   .project .picture-frame {
     flex-basis: 30%;
     background-size: cover;
-    background-position: center 0; }
+    background-position: center 0;
+    box-shadow: inset 0px 0px 36px 0px rgba(9, 45, 28, 0.75); }
 
 .arrow-trans {
   width: 100%;
