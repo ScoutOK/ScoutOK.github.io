@@ -167,16 +167,6 @@ section {
   section h2 {
     padding: 1em;
     background: #377557; }
-  section .flex-design {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
-    section .flex-design .design {
-      flex-basis: 33%;
-      padding: 2em; }
-      section .flex-design .design img {
-        max-width: 100%;
-        border: 0.1em #eee solid; }
 
 #presentations .content {
   position: relative;
@@ -244,6 +234,18 @@ section {
     background-size: cover;
     background-position: center 0;
     box-shadow: inset 0px 0px 36px 0px rgba(9, 45, 28, 0.75); }
+
+#designs .flex-design {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3em; }
+  #designs .flex-design .design {
+    flex-basis: 33%;
+    padding: 2em; }
+    #designs .flex-design .design img {
+      max-width: 100%;
+      border: 0.1em #eee solid; }
 
 .arrow-trans {
   width: 100%;

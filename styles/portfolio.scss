@@ -227,19 +227,6 @@ section {
     padding: 1em;
     background: $oneMed;
   }
-  .flex-design {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .design {
-      flex-basis: 33%;
-      padding: 2em;
-      img{
-        max-width: 100%;
-        border: .1em $whitish solid;
-      }
-    }
-  }
 }
 
 #presentations {
@@ -328,6 +315,23 @@ section {
   // &:last-child {
   //   margin-bottom: 0;
   // }
+}
+
+#designs {
+  .flex-design {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3em;
+    .design {
+      flex-basis: 33%;
+      padding: 2em;
+      img{
+        max-width: 100%;
+        border: .1em $whitish solid;
+      }
+    }
+  }
 }
 
 .arrow-trans {
