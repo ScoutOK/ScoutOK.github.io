@@ -111,9 +111,7 @@ h3 {
     margin: 0; }
 
 #hero {
-  background: linear-gradient(rgba(9, 45, 28, 0.5) 0%, rgba(9, 45, 28, 0.5) 60%, #092d1c 100%);
   position: relative;
-  z-index: 5;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -127,11 +125,12 @@ h3 {
     bottom: 0;
     transform-origin-x: 100%; }
   #hero .background {
-    background: url("../img/jay2.png") center;
+    background: linear-gradient(rgba(9, 45, 28, 0.5) 0%, rgba(9, 45, 28, 0.5) 60%, #092d1c 100%), url("../img/jay2.png") center;
     background-size: cover;
     transform: translateZ(-300px) scale(2);
     z-index: 3; }
   #hero .text {
+    background: radial-gradient(ellipse, rgba(9, 45, 28, 0.75) 0%, rgba(9, 45, 28, 0.1) 20%);
     padding: 15em 0;
     color: #eee;
     font-size: 1em;
@@ -139,7 +138,6 @@ h3 {
     z-index: 4; }
   #hero .text-inner {
     display: table;
-    background: radial-gradient(ellipse, rgba(9, 45, 28, 0.75) 0%, rgba(9, 45, 28, 0.1) 95%);
     margin: 0 auto;
     overflow: visible; }
   #hero h1 {
@@ -149,8 +147,9 @@ h3 {
     font-size: 3em; }
 
 #hero + .arrow-trans {
-  margin-top: -7.5em;
-  z-index: 5; }
+  margin-top: -20em;
+  transform: translateZ(90px);
+  z-index: 1; }
 
 section {
   border-top: #D4E7DE solid 0.1em; }

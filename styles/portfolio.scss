@@ -157,9 +157,7 @@ h3 {
 
 //parallax scrolling on this section adapted from Keith Clark http://keithclark.co.uk/articles/pure-css-parallax-websites/
 #hero {
-  background: linear-gradient(rgba(9,45,28,.5) 0%,rgba(9,45,28,.5) 60%, rgba(9,45,28,1) 100%);
   position: relative;
-  z-index: 5;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -174,12 +172,13 @@ h3 {
     transform-origin-x: 100%;
   }
   .background {
-    background: url($heroImage) center;
+    background: linear-gradient(rgba(9,45,28,.5) 0%,rgba(9,45,28,.5) 60%, rgba(9,45,28,1) 100%), url($heroImage) center;
     background-size: cover;
     transform: translateZ(-300px) scale(2);
     z-index: 3;
   }
   .text {
+    background: radial-gradient( ellipse, rgba(9,45,28,.75) 0%, rgba(9,45,28,.1) 20%);
     padding: 15em 0;
     color: $whitish;
     font-size: 1em;
@@ -188,7 +187,6 @@ h3 {
   }
   .text-inner {
     display: table;
-    background: radial-gradient( ellipse, rgba(9,45,28,.75) 0%, rgba(9,45,28,.1) 95%);
     margin: 0 auto;
     overflow: visible;
   }
@@ -201,8 +199,9 @@ h3 {
 }
 
 #hero + .arrow-trans {
-  margin-top: -7.5em;
-  z-index: 5
+  margin-top: -20em;
+  transform: translateZ(90px);
+  z-index: 1;
   //background: $oneDark, url(../img/arrowLight.svg) no-repeat center;
   //border-top: none;
 }
