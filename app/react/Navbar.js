@@ -25,7 +25,7 @@ export default (props) => {
           </Link>
         </li>
         <li>
-          <Link activeClass='active' to='design' spy={true} smooth={true}>
+          <Link activeClass='active' to='designs' spy={true} smooth={true}>
             <span>Design Work</span>
             <div className='underline'></div>
           </Link>

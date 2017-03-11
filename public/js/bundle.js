@@ -9604,7 +9604,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function (props) {
   return _react2.default.createElement(
     'section',
-    { id: 'design' },
+    { id: 'designs' },
     _react2.default.createElement(
       'h2',
       null,
@@ -9816,7 +9816,7 @@ exports.default = function (props) {
         null,
         _react2.default.createElement(
           _reactScroll.Link,
-          { activeClass: 'active', to: 'design', spy: true, smooth: true },
+          { activeClass: 'active', to: 'designs', spy: true, smooth: true },
           _react2.default.createElement(
             'span',
             null,
