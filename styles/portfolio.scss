@@ -169,7 +169,7 @@ h3 {
 //parallax scrolling on this section adapted from Keith Clark http://keithclark.co.uk/articles/pure-css-parallax-websites/
 #hero {
   position: relative;
-  height: 100vh;
+  height: 38em;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 300px;
@@ -210,7 +210,7 @@ h3 {
 }
 
 #hero + .arrow-trans {
-  margin-top: -20em;
+  margin-top: -15em;
   transform: translateZ(90px);
   z-index: 1;
   //background: $oneDark, url(../img/arrowLight.svg) no-repeat center;

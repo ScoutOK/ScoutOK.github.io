@@ -120,7 +120,7 @@ h3 {
 
 #hero {
   position: relative;
-  height: 100vh;
+  height: 38em;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 300px;
@@ -155,7 +155,7 @@ h3 {
     font-size: 3em; }
 
 #hero + .arrow-trans {
-  margin-top: -20em;
+  margin-top: -15em;
   transform: translateZ(90px);
   z-index: 1; }
 
