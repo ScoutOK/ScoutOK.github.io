@@ -9556,7 +9556,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = function (props) {
   return _react2.default.createElement(
-    'div',
+    'a',
     { className: 'design', id: 'design' + props.design.id },
     _react2.default.createElement(
       'div',
@@ -9570,6 +9570,11 @@ exports.default = function (props) {
         'h3',
         null,
         props.design.name
+      ),
+      _react2.default.createElement(
+        'h4',
+        null,
+        props.design.year
       ),
       _react2.default.createElement(
         'p',
