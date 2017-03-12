@@ -5,7 +5,9 @@ export default (props) => (
     <div className='img-frame'>
       <img src={props.design.image} alt={props.design.alt} />
     </div>
-    <h3>{props.design.name}</h3>
-    <p>{props.design.description}</p>
+    <div className='text'>
+      <h3>{props.design.name}</h3>
+      <p>{props.design.description}</p>
+    </div>
   </div>
 )

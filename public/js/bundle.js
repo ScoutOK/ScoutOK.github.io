@@ -9564,14 +9564,18 @@ exports.default = function (props) {
       _react2.default.createElement('img', { src: props.design.image, alt: props.design.alt })
     ),
     _react2.default.createElement(
-      'h3',
-      null,
-      props.design.name
-    ),
-    _react2.default.createElement(
-      'p',
-      null,
-      props.design.description
+      'div',
+      { className: 'text' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        props.design.name
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        props.design.description
+      )
     )
   );
 };
