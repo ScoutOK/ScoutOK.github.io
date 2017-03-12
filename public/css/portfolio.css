@@ -184,7 +184,7 @@ section {
   #presentations .presentation.active {
     display: block;
     opacity: 1;
-    animation: fadeIn 1s ease-in-out; }
+    animation: fadeIn .75s ease-in-out; }
   #presentations .presentation h3 {
     margin-top: calc(1em + 20px); }
   #presentations .presentation p {
@@ -287,7 +287,7 @@ section {
     background-size: cover;
     height: 20px;
     width: 20px;
-    transition: background .5s ease-in-out; }
+    transition: background .75s ease-in-out; }
     #pres-dots .dot.current {
       background: url(../img/circleFill.svg);
       background-size: cover; }
