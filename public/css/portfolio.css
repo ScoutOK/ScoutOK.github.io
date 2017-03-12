@@ -1,13 +1,29 @@
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 * {
   box-sizing: border-box; }
 
 body {
   padding: 0;
   margin: 0;
+  color: #eee;
   font-family: "Source Sans Pro", sans-serif;
   background: #092D1C; }
 
+#app {
+  width: 100%;
+  height: 100%; }
+
 a.button {
+  display: inline-block;
   text-decoration: none;
   font-size: .9em;
   border: #377557 0.15em solid;
@@ -43,26 +59,38 @@ nav {
     margin: auto;
     height: 3.5em; }
   nav li {
-    display: block;
-    padding: 1.5em 2em 1em; }
-    nav li.active {
-      border-bottom: 0.2em solid #377557; }
+    display: block; }
     nav li a {
       display: block;
+      padding: 1.5em 0 0;
       width: 100%;
       height: 100%;
       text-decoration: none;
       color: #2D2909;
-      font-weight: bold; }
-  nav .container {
-    max-width: 1500px;
-    margin: auto; }
+      font-weight: bold;
+      position: relative; }
+      nav li a span {
+        display: block;
+        margin: 0 2em; }
+      nav li a .underline {
+        width: 100%;
+        height: .2em;
+        border-radius: .1em;
+        margin-top: .5em;
+        transition: opacity .5s ease-in-out;
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(90deg, rgba(55, 117, 87, 0.6) 0%, rgba(45, 41, 9, 0.8) 33%, rgba(45, 41, 9, 0.9) 50%, rgba(45, 41, 9, 0.8) 66%, rgba(55, 117, 87, 0.6) 100%); }
+      nav li a.active .underline {
+        opacity: 1; }
 
 footer {
   width: 100%;
   background: #377557;
   color: #eee;
-  padding: 3em; }
+  padding: 3em;
+  border-top: #D4E7DE solid 0.1em; }
   footer h3 {
     margin: 0; }
   footer .social ul {
@@ -92,15 +120,33 @@ h3 {
     margin: 0; }
 
 #hero {
-  padding: 15em 0;
-  background: linear-gradient(rgba(9, 45, 28, 0.5) 0%, rgba(9, 45, 28, 0.5) 60%, #092d1c 100%), url("../img/jay2.png") center;
-  background-size: cover; }
+  position: relative;
+  height: 38em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+  perspective-origin-x: 100%; }
+  #hero .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform-origin-x: 100%; }
+  #hero .background {
+    background: linear-gradient(rgba(9, 45, 28, 0.5) 0%, rgba(9, 45, 28, 0.5) 60%, #092d1c 100%), url("../img/jay2.png") center;
+    background-size: cover;
+    transform: translateZ(-300px) scale(2);
+    z-index: 3; }
   #hero .text {
+    background: radial-gradient(ellipse, rgba(9, 45, 28, 0.75) 0%, rgba(9, 45, 28, 0.1) 20%);
+    padding: 15em 0;
     color: #eee;
-    font-size: 1em; }
+    font-size: 1em;
+    transform: translateZ(0);
+    z-index: 4; }
   #hero .text-inner {
     display: table;
-    background: radial-gradient(ellipse, rgba(9, 45, 28, 0.75) 0%, rgba(9, 45, 28, 0.1) 95%);
     margin: 0 auto;
     overflow: visible; }
   #hero h1 {
@@ -110,51 +156,51 @@ h3 {
     font-size: 3em; }
 
 #hero + .arrow-trans {
-  margin-top: -7.5em; }
+  margin-top: -15em;
+  transform: translateZ(90px);
+  z-index: 1; }
 
 section {
-  border-top: #D4E7DE solid 0.1em;
-  border-bottom: #D4E7DE solid 0.1em; }
-  section#presentations .content {
+  border-top: #D4E7DE solid 0.1em; }
+  section .content {
     width: 100%;
-    position: relative;
-    background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%);
-    padding-bottom: 2em; }
-  section#presentations .presentation {
-    transition: opacity 5s ease-in-out;
-    width: 75%;
-    margin: auto;
-    display: none;
-    opacity: 0; }
-    section#presentations .presentation.active {
-      display: block;
-      opacity: 1; }
-    section#presentations .presentation h3 {
-      margin-top: calc(1em + 20px); }
-  section#presentations .frame-container {
-    width: 100%;
-    padding-bottom: 56.25%;
-    /* 16:9 */
-    position: relative; }
-    section#presentations .frame-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
+    border-bottom: #D4E7DE solid 0.1em; }
   section h2 {
     padding: 1em;
     background: #377557; }
-  section .flex-design {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
-    section .flex-design .design {
-      flex-basis: 33%;
-      padding: 2em; }
-      section .flex-design .design img {
-        max-width: 100%;
-        border: 0.1em #eee solid; }
+
+#presentations .content {
+  position: relative;
+  background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%);
+  padding-bottom: 2em; }
+
+#presentations .presentation {
+  transition: opacity 1s ease-in-out;
+  width: 75%;
+  margin: auto;
+  display: none;
+  opacity: 0;
+  color: #eee; }
+  #presentations .presentation.active {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 1s ease-in-out; }
+  #presentations .presentation h3 {
+    margin-top: calc(1em + 20px); }
+  #presentations .presentation p {
+    margin-bottom: 1em; }
+
+#presentations .frame-container {
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  position: relative; }
+  #presentations .frame-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 .slide-arrow {
   position: absolute;
@@ -173,22 +219,54 @@ section {
   width: 100%; }
   .project:nth-child(odd) {
     background: rgba(55, 117, 87, 0.15); }
+  .project .text {
+    color: #eee;
+    flex-basis: 70%;
+    min-height: 15em;
+    padding: 2em 2em 3em; }
+    .project .text h3 {
+      padding: 1em;
+      margin: 0; }
+    .project .text p {
+      padding: 1em;
+      margin: 0; }
+  .project .picture-frame {
+    flex-basis: 30%;
+    background-size: cover;
+    background-position: center 0;
+    box-shadow: inset 0px 0px 36px 0px rgba(9, 45, 28, 0.75); }
 
-.blocker {
-  color: #eee;
-  flex-basis: 70%;
-  min-height: 15em; }
-  .blocker h3 {
-    padding: 1em;
-    margin: 0; }
-  .blocker p {
-    padding: 1em;
-    margin: 0; }
-
-.picture-frame {
-  flex-basis: 30%;
-  background-size: cover;
-  background-position: center 0; }
+#designs .flex-design {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 3em; }
+  #designs .flex-design .design {
+    flex-basis: 33.3333333333%;
+    position: relative; }
+    #designs .flex-design .design .img-frame {
+      width: 100%;
+      overflow: hidden;
+      position: relative; }
+      #designs .flex-design .design .img-frame:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%; }
+      #designs .flex-design .design .img-frame img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%; }
+    #designs .flex-design .design .text {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: none;
+      background: linear-gradient(rgba(9, 45, 28, 0) 0%, rgba(9, 45, 28, 0.9) 15%);
+      padding: 0 .5em; }
+    #designs .flex-design .design:hover .text, #designs .flex-design .design:focus .text {
+      display: block; }
 
 .arrow-trans {
   width: 100%;
@@ -213,3 +291,36 @@ section {
     #pres-dots .dot.current {
       background: url(../img/circleFill.svg);
       background-size: cover; }
+
+@media screen and (min-width: 1501px) {
+  nav {
+    height: 100%;
+    width: 20%;
+    padding: 1.5em; }
+    nav ul {
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 0; }
+      nav ul li {
+        width: 75%;
+        border-radius: 2px; }
+        nav ul li a {
+          padding: 3em 0 .5em; }
+          nav ul li a span {
+            display: block;
+            margin: 0;
+            text-align: right; }
+          nav ul li a .underline {
+            background: linear-gradient(90deg, rgba(55, 117, 87, 0.4) 0%, rgba(45, 41, 9, 0.9) 100%); }
+  #main-cont {
+    margin-left: 20%;
+    width: 80%;
+    margin-top: 0; } }
+
+@media screen and (min-width: 1876px) {
+  nav {
+    width: calc(100% - 1500px); }
+  #main-cont {
+    margin-left: calc(100% - 1500px); } }
