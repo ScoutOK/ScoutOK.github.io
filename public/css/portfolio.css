@@ -184,7 +184,7 @@ section {
   #presentations .presentation.active {
     display: block;
     opacity: 1;
-    animation: fadeIn 1s ease-in-out; }
+    animation: fadeIn .75s ease-in-out; }
   #presentations .presentation h3 {
     margin-top: calc(1em + 20px); }
   #presentations .presentation p {
@@ -263,10 +263,13 @@ section {
       bottom: 0;
       width: 100%;
       display: none;
+      opacity: 0;
       background: linear-gradient(rgba(9, 45, 28, 0) 0%, rgba(9, 45, 28, 0.9) 15%);
       padding: 0 .5em; }
     #designs .flex-design .design:hover .text, #designs .flex-design .design:focus .text {
-      display: block; }
+      display: block;
+      opacity: 1;
+      animation: fadeIn .4s ease-in-out; }
 
 .arrow-trans {
   width: 100%;
@@ -286,7 +289,8 @@ section {
     background: url(../img/circleDonut.svg);
     background-size: cover;
     height: 20px;
-    width: 20px; }
+    width: 20px;
+    transition: background .75s ease-in-out; }
     #pres-dots .dot.current {
       background: url(../img/circleFill.svg);
       background-size: cover; }
