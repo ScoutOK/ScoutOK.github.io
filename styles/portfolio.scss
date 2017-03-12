@@ -310,7 +310,7 @@ section {
     flex-basis: 30%;
     background-size: cover;
     background-position: center 0;
-    box-shadow: inset 0px 0px 36px 0px rgba(9,45,28, .75);;
+    box-shadow: inset 0px 0px 36px 0px rgba(9,45,28, .75);
   }
   // margin-bottom: 3em;
   // &:last-child {
@@ -349,12 +349,15 @@ section {
         bottom: 0;
         width: 100%;
         display: none;
+        opacity: 0;
         background: linear-gradient(rgba(9,45,28, 0) 0%, rgba(9,45,28, .9) 15%);
         padding: 0 .5em;
       }
       &:hover, &:focus {
         .text {
           display: block;
+          opacity: 1;
+          animation: fadeIn .4s ease-in-out;
         }
       }
     }
