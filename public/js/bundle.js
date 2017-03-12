@@ -9558,7 +9558,11 @@ exports.default = function (props) {
   return _react2.default.createElement(
     'div',
     { className: 'design', id: 'design' + props.design.id },
-    _react2.default.createElement('img', { src: props.design.image, alt: props.design.alt }),
+    _react2.default.createElement(
+      'div',
+      { className: 'img-frame' },
+      _react2.default.createElement('img', { src: props.design.image, alt: props.design.alt })
+    ),
     _react2.default.createElement(
       'h3',
       null,

@@ -244,9 +244,20 @@ section {
     flex-basis: 33%; }
     #designs .flex-design .design:nth-child(3n - 1) {
       margin: 0 3em; }
-    #designs .flex-design .design img {
-      max-width: 100%;
-      border: 0.1em #eee solid; }
+    #designs .flex-design .design .img-frame {
+      width: 100%;
+      overflow: hidden;
+      position: relative; }
+      #designs .flex-design .design .img-frame:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%; }
+      #designs .flex-design .design .img-frame img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%; }
 
 .arrow-trans {
   width: 100%;

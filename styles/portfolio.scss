@@ -328,9 +328,22 @@ section {
       &:nth-child(3n - 1){
         margin: 0 3em;
       }
-      img{
-        max-width: 100%;
-        border: .1em $whitish solid;
+      .img-frame {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        &:after {
+          content: "";
+          display: block;
+          padding-bottom: 100%;
+        }
+        img{
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 100%;
+        }
       }
     }
   }
