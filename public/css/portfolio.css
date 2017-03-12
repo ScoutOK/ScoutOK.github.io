@@ -242,6 +242,7 @@ section {
   justify-content: space-between;
   padding: 3em; }
   #designs .flex-design .design {
+    cursor: pointer;
     flex-basis: 33.3333333333%;
     position: relative; }
     #designs .flex-design .design .img-frame {
