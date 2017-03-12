@@ -10176,6 +10176,13 @@ module.exports = [{
   year: '2013',
   image: 'public/img/RockyHorror.jpg',
   alt: 'image of backlit muscular person in lingerie'
+}, {
+  id: 4,
+  name: 'Institute for Human Centered Design',
+  type: 'Website Design',
+  year: '2015',
+  image: 'public/img/ihcd.png',
+  alt: 'homepage for the Institute for Human Centered Design'
 }];
 
 /***/ }),
