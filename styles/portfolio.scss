@@ -38,6 +38,7 @@ $xlargeBreak: $pageWidth/.8 + 1px;
 body {
   padding: 0;
   margin: 0;
+  color: $whitish;
   font-family: $baseFont;
   background: $oneDark;
 }
@@ -169,7 +170,7 @@ h3 {
 //parallax scrolling on this section adapted from Keith Clark http://keithclark.co.uk/articles/pure-css-parallax-websites/
 #hero {
   position: relative;
-  height: 100vh;
+  height: 38em;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 300px;
@@ -210,7 +211,7 @@ h3 {
 }
 
 #hero + .arrow-trans {
-  margin-top: -20em;
+  margin-top: -15em;
   transform: translateZ(90px);
   z-index: 1;
   //background: $oneDark, url(../img/arrowLight.svg) no-repeat center;
@@ -226,19 +227,6 @@ section {
   h2 {
     padding: 1em;
     background: $oneMed;
-  }
-  .flex-design {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .design {
-      flex-basis: 33%;
-      padding: 2em;
-      img{
-        max-width: 100%;
-        border: .1em $whitish solid;
-      }
-    }
   }
 }
 
@@ -328,6 +316,50 @@ section {
   // &:last-child {
   //   margin-bottom: 0;
   // }
+}
+
+#designs {
+  .flex-design {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 3em;
+    .design {
+      flex-basis: 33.3333333333%;
+      position: relative;
+      .img-frame {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        &:after {
+          content: "";
+          display: block;
+          padding-bottom: 100%;
+        }
+        img{
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 100%;
+        }
+      }
+      .text {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: none;
+        background: linear-gradient(rgba(9,45,28, 0) 0%, rgba(9,45,28, .9) 15%);
+        padding: 0 .5em;
+      }
+      &:hover, &:focus {
+        .text {
+          display: block;
+        }
+      }
+    }
+    
+  }
 }
 
 .arrow-trans {

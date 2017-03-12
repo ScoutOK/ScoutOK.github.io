@@ -14,6 +14,7 @@
 body {
   padding: 0;
   margin: 0;
+  color: #eee;
   font-family: "Source Sans Pro", sans-serif;
   background: #092D1C; }
 
@@ -120,7 +121,7 @@ h3 {
 
 #hero {
   position: relative;
-  height: 100vh;
+  height: 38em;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 300px;
@@ -155,7 +156,7 @@ h3 {
     font-size: 3em; }
 
 #hero + .arrow-trans {
-  margin-top: -20em;
+  margin-top: -15em;
   transform: translateZ(90px);
   z-index: 1; }
 
@@ -167,16 +168,6 @@ section {
   section h2 {
     padding: 1em;
     background: #377557; }
-  section .flex-design {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
-    section .flex-design .design {
-      flex-basis: 33%;
-      padding: 2em; }
-      section .flex-design .design img {
-        max-width: 100%;
-        border: 0.1em #eee solid; }
 
 #presentations .content {
   position: relative;
@@ -244,6 +235,38 @@ section {
     background-size: cover;
     background-position: center 0;
     box-shadow: inset 0px 0px 36px 0px rgba(9, 45, 28, 0.75); }
+
+#designs .flex-design {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 3em; }
+  #designs .flex-design .design {
+    flex-basis: 33.3333333333%;
+    position: relative; }
+    #designs .flex-design .design .img-frame {
+      width: 100%;
+      overflow: hidden;
+      position: relative; }
+      #designs .flex-design .design .img-frame:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%; }
+      #designs .flex-design .design .img-frame img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%; }
+    #designs .flex-design .design .text {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: none;
+      background: linear-gradient(rgba(9, 45, 28, 0) 0%, rgba(9, 45, 28, 0.9) 15%);
+      padding: 0 .5em; }
+    #designs .flex-design .design:hover .text, #designs .flex-design .design:focus .text {
+      display: block; }
 
 .arrow-trans {
   width: 100%;

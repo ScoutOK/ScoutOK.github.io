@@ -9556,18 +9556,31 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = function (props) {
   return _react2.default.createElement(
-    'div',
-    { className: 'design', id: props.design.id },
-    _react2.default.createElement('img', { src: props.design.image, alt: props.design.alt }),
+    'a',
+    { className: 'design', id: 'design' + props.design.id },
     _react2.default.createElement(
-      'h3',
-      null,
-      props.design.name
+      'div',
+      { className: 'img-frame' },
+      _react2.default.createElement('img', { src: props.design.image, alt: props.design.alt })
     ),
     _react2.default.createElement(
-      'p',
-      null,
-      props.design.description
+      'div',
+      { className: 'text' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        props.design.name
+      ),
+      _react2.default.createElement(
+        'h4',
+        null,
+        props.design.year
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        props.design.description
+      )
     )
   );
 };
@@ -10172,6 +10185,13 @@ module.exports = [{
   year: '2013',
   image: 'public/img/RockyHorror.jpg',
   alt: 'image of backlit muscular person in lingerie'
+}, {
+  id: 4,
+  name: 'Institute for Human Centered Design',
+  type: 'Website Design',
+  year: '2015',
+  image: 'public/img/ihcd.png',
+  alt: 'homepage for the Institute for Human Centered Design'
 }];
 
 /***/ }),
