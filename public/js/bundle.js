@@ -10429,7 +10429,7 @@ exports.default = function () {
           _react2.default.createElement(
             'a',
             { href: 'http://stackoverflow.com/users/7147809/scout-okeefe?tab=profile' },
-            _react2.default.createElement('img', { src: 'public/img/stackoverflow.svg', alt: 'Stack Overflow' })
+            _react2.default.createElement('img', { src: 'public/img/stackOverflow.svg', alt: 'Stack Overflow' })
           )
         ),
         _react2.default.createElement(
@@ -10634,7 +10634,7 @@ exports.default = function (props) {
     ),
     _react2.default.createElement(
       'a',
-      { className: 'button' },
+      { href: '', className: 'button' },
       'Transcript'
     )
   );
