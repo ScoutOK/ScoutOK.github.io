@@ -8,12 +8,12 @@ export default (props) => (
       <p>{props.project.shortText}</p>
       {props.project.collabs ? <p><b>Collaborators:</b> {props.project.collabs.join(', ')}</p>: null}
       {props.project.technologies ? <p><b>Technologies:</b> {props.project.technologies.join(', ')}</p>: null}
-      <a  className='button' href={props.project.github}>GitHub</a>
-      {props.project.otherButtons.map((button, idx)=>{
+      <a  className='button' href={props.project.github} target='_blank'>GitHub</a>
+      {props.project.otherButtons ? props.project.otherButtons.map((button, idx)=>{
         return (
-          <a href={button.url} key={idx} className='button'>{button.title}</a>
+          <a href={button.url} key={idx} className='button' target='_blank'>{button.title}</a>
         )
-      })}
+      }): null}
     </div>
   </div>
 )
