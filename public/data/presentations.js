@@ -2,8 +2,8 @@ module.exports = [
   {
     id: 0,
     name:'Introduction to OpenCV',
-    videoUrl:'https://www.youtube.com/watch/oI1GgyRU5a4',
-    description:'In this video I talk about computer vision with a specific focus on the OpenCV library. Scout explains the basics of OpenCV such as the basic data structure and how the library handles object detection. Scout finishes up the presentation by displaying some brief live examples of some basic functions of OpenCV, including face detection, through a web cam.',
+    videoUrl:'https://www.youtube.com/embed/oI1GgyRU5a4',
+    description:'In this video I talk about computer vision with a specific focus on the OpenCV library. I explain the basics of OpenCV such as the basic data structure and how the library handles object detection. I finish up the presentation by displaying some brief live examples of some basic functions of OpenCV, including face detection, through a web cam.',
   },
   {
     id: 1,
