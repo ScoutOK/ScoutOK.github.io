@@ -51,7 +51,7 @@ nav {
   width: 100vw;
   z-index: 1000;
   color: #333;
-  box-shadow: 0px 0.5em 0.5em -0.5em #2d2909; }
+  box-shadow: 0 0.5em 0.5em -0.5em #2d2909; }
   nav ul {
     display: flex;
     list-style: none;
@@ -277,7 +277,8 @@ section {
       display: none;
       opacity: 0;
       background: rgba(212, 231, 222, 0.95);
-      padding: 0 .5em; }
+      padding: 0 .5em;
+      box-shadow: 0 0 0.5em 0 #2d2909; }
       #designs .grid-design .design .text h3,
       #designs .grid-design .design .text h4 {
         color: #333;
