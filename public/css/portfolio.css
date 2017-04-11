@@ -59,14 +59,19 @@ nav {
     margin: auto;
     height: 3.5em; }
   nav li {
-    display: block; }
+    display: block;
+    color: #2D2909;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out; }
+    nav li:hover, nav li:focus {
+      cursor: pointer;
+      background: #377557;
+      color: #eee; }
     nav li a {
       display: block;
       padding: 1.5em 0 0;
       width: 100%;
       height: 100%;
       text-decoration: none;
-      color: #2D2909;
       font-weight: bold;
       position: relative; }
       nav li a span {
