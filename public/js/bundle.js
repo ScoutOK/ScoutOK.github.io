@@ -10435,6 +10435,19 @@ exports.default = function () {
             { href: 'http://codepen.io/scoutok/' },
             _react2.default.createElement('img', { src: 'public/img/codepen.svg', alt: 'Code Pen' })
           )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: 'mailto:ohkeefe@gmail.com' },
+            _react2.default.createElement(
+              'span',
+              null,
+              'ohkeefe at gmail dot com'
+            )
+          )
         )
       )
     ),
