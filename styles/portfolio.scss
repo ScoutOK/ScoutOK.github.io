@@ -91,6 +91,11 @@ nav {
   }
   li {
     display: block;
+    &:hover,
+    &:focus{
+      cursor: pointer;
+      // background: linear-gradient(rgba(55,117,87, 0) 60%, rgba(55,117,87,1) 100%);
+    }
     a {
       display: block;
       padding: 1.5em 0 0;
