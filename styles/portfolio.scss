@@ -327,14 +327,16 @@ section {
 }
 
 #designs {
-  .flex-design {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding: 3em;
+  .content {
+    background: linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%);
+  }
+  .grid-design {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: .5em;
+    padding: 2em;
     .design {
       cursor: pointer;
-      flex-basis: 33.3333333333%;
       position: relative;
       .img-frame {
         width: 100%;
@@ -350,7 +352,12 @@ section {
           top: 0;
           left: 0;
           display: block;
-          width: 100%;
+          &.portrait {
+            width: 100%;
+          }
+          &.landscape {
+            height: 100%
+          }
         }
       }
       .text {

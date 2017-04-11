@@ -241,30 +241,35 @@ section {
     background-position: center 0;
     box-shadow: inset 0px 0px 36px 0px rgba(9, 45, 28, 0.75); }
 
-#designs .flex-design {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding: 3em; }
-  #designs .flex-design .design {
+#designs .content {
+  background: linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%); }
+
+#designs .grid-design {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: .5em;
+  padding: 2em; }
+  #designs .grid-design .design {
     cursor: pointer;
-    flex-basis: 33.3333333333%;
     position: relative; }
-    #designs .flex-design .design .img-frame {
+    #designs .grid-design .design .img-frame {
       width: 100%;
       overflow: hidden;
       position: relative; }
-      #designs .flex-design .design .img-frame:after {
+      #designs .grid-design .design .img-frame:after {
         content: "";
         display: block;
         padding-bottom: 100%; }
-      #designs .flex-design .design .img-frame img {
+      #designs .grid-design .design .img-frame img {
         position: absolute;
         top: 0;
         left: 0;
-        display: block;
-        width: 100%; }
-    #designs .flex-design .design .text {
+        display: block; }
+        #designs .grid-design .design .img-frame img.portrait {
+          width: 100%; }
+        #designs .grid-design .design .img-frame img.landscape {
+          height: 100%; }
+    #designs .grid-design .design .text {
       position: absolute;
       bottom: 0;
       width: 100%;
@@ -272,7 +277,7 @@ section {
       opacity: 0;
       background: linear-gradient(rgba(9, 45, 28, 0) 0%, rgba(9, 45, 28, 0.9) 15%);
       padding: 0 .5em; }
-    #designs .flex-design .design:hover .text, #designs .flex-design .design:focus .text {
+    #designs .grid-design .design:hover .text, #designs .grid-design .design:focus .text {
       display: block;
       opacity: 1;
       animation: fadeIn .4s ease-in-out; }
