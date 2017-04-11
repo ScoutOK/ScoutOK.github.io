@@ -10310,11 +10310,6 @@ exports.default = function (props) {
         'h4',
         null,
         props.design.year
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        props.design.description
       )
     )
   );
