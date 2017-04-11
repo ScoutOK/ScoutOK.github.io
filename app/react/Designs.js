@@ -9,7 +9,7 @@ export default (props) => {
   return (
     <section id='designs'>
       <h2>Design Work</h2>
-      <div className='flex-design content'>
+      <div className='grid-design content'>
         {designs.map((design, idx)=> {
           return <Design design={design} key={design.id}/>
         })}
