@@ -17,6 +17,7 @@ $xlargeBreak: $pageWidth/.8 + 1px;
 //$xlargeNav: calc(100% - $pageWidth);
 
 //keyframes for css transitions/animations
+//presentation slidehow keyframes
 @keyframes fadeIn{
   0% {
     display: none;
@@ -145,6 +146,7 @@ footer {
       padding: 0;
       display: flex;
       align-items: center;
+      margin-top: 0;
     }
     li {
       margin-right: 1em;
@@ -287,19 +289,18 @@ section {
       height: 100%;
     }
   }
-}
-
-.slide-arrow {
-  position: absolute;
-  width: 4%;
-  margin-top: 17.09375%;
-  top: 0;
-  cursor: pointer;
-  &.left-arrow {
-    left: 4%;
-  }
-  &.right-arrow {
-    right: 4%;
+  .slide-arrow {
+    position: absolute;
+    width: 4%;
+    margin-top: 17.09375%;
+    top: 0;
+    cursor: pointer;
+    &.left-arrow {
+      left: 4%;
+    }
+    &.right-arrow {
+      right: 4%;
+    }
   }
 }
 
@@ -375,7 +376,7 @@ section {
       }
       .text {
         position: absolute;
-        bottom: 0;
+        top: 100%;
         color: $blackish;
         width: 100%;
         display: none;
