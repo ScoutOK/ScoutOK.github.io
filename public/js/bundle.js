@@ -10291,8 +10291,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = function (props) {
   return _react2.default.createElement(
-    'a',
-    { className: 'design', id: 'design' + props.design.id },
+    'div',
+    { className: 'design', id: 'design' + props.design.id, tabIndex: 0 },
     _react2.default.createElement(
       'div',
       { className: 'img-frame' },
@@ -10313,7 +10313,7 @@ exports.default = function (props) {
       ),
       _react2.default.createElement(
         'a',
-        { className: 'button' },
+        { className: 'button', tabIndex: 0 },
         'View ',
         props.design.short,
         ' Larger'
