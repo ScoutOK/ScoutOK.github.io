@@ -10543,7 +10543,7 @@ exports.default = function (props) {
         null,
         _react2.default.createElement(
           _reactScroll.Link,
-          { activeClass: 'active', to: 'top', spy: true, smooth: true },
+          { activeClass: 'active', to: 'top', spy: true, smooth: true, tabIndex: 0 },
           _react2.default.createElement(
             'span',
             null,
@@ -10557,7 +10557,7 @@ exports.default = function (props) {
         null,
         _react2.default.createElement(
           _reactScroll.Link,
-          { activeClass: 'active', to: 'projects', spy: true, smooth: true },
+          { activeClass: 'active', to: 'projects', spy: true, smooth: true, tabIndex: 0 },
           _react2.default.createElement(
             'span',
             null,
@@ -10571,7 +10571,7 @@ exports.default = function (props) {
         null,
         _react2.default.createElement(
           _reactScroll.Link,
-          { activeClass: 'active', to: 'presentations', spy: true, smooth: true },
+          { activeClass: 'active', to: 'presentations', spy: true, smooth: true, tabIndex: 0 },
           _react2.default.createElement(
             'span',
             null,
@@ -10585,7 +10585,7 @@ exports.default = function (props) {
         null,
         _react2.default.createElement(
           _reactScroll.Link,
-          { activeClass: 'active', to: 'designs', spy: true, smooth: true },
+          { activeClass: 'active', to: 'designs', spy: true, smooth: true, tabIndex: 0 },
           _react2.default.createElement(
             'span',
             null,
@@ -10599,7 +10599,7 @@ exports.default = function (props) {
         null,
         _react2.default.createElement(
           _reactScroll.Link,
-          { activeClass: 'active', to: 'contact', spy: true, smooth: true },
+          { activeClass: 'active', to: 'contact', spy: true, smooth: true, tabIndex: 0 },
           _react2.default.createElement(
             'span',
             null,
