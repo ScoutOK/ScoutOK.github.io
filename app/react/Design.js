@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+import Shadowbox from './Shadowbox'
+
 export default class Presentations extends Component{
   constructor () {
     super();
@@ -30,7 +32,7 @@ export default class Presentations extends Component{
           <h4>{props.design.year}</h4>
           <a className='button' tabIndex={0} onClick={this.showBox}>View {props.design.short} Larger</a>
         </div>
-        {this.state.box ? 'COOL STORY BRO' : null}
+        {this.state.box ? <Shadowbox design={props.design} /> : null}
       </div>
     )
   }

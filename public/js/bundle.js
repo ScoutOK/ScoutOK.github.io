@@ -10289,6 +10289,10 @@ var _react = __webpack_require__(7);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Shadowbox = __webpack_require__(204);
+
+var _Shadowbox2 = _interopRequireDefault(_Shadowbox);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -10356,7 +10360,7 @@ var Presentations = function (_Component) {
             ' Larger'
           )
         ),
-        this.state.box ? 'COOL STORY BRO' : null
+        this.state.box ? _react2.default.createElement(_Shadowbox2.default, { design: props.design }) : null
       );
     }
   }]);
@@ -23453,6 +23457,27 @@ var _Main2 = _interopRequireDefault(_Main);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(_Main2.default, null), document.getElementById('app'));
+
+/***/ }),
+/* 204 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(7);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (props) {
+  return _react2.default.createElement('div', { id: 'shadowbox' });
+};
 
 /***/ })
 /******/ ]);
