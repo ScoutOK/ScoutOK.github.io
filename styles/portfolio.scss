@@ -17,6 +17,7 @@ $xlargeBreak: $pageWidth/.8 + 1px;
 //$xlargeNav: calc(100% - $pageWidth);
 
 //keyframes for css transitions/animations
+//presentation slidehow keyframes
 @keyframes fadeIn{
   0% {
     display: none;
@@ -28,6 +29,33 @@ $xlargeBreak: $pageWidth/.8 + 1px;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut{
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: -50%;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    margin-top: -50%;
+  }
+  to {
+    margin-top: 0;
   }
 }
 
@@ -145,6 +173,7 @@ footer {
       padding: 0;
       display: flex;
       align-items: center;
+      margin-top: 0;
     }
     li {
       margin-right: 1em;
@@ -287,19 +316,18 @@ section {
       height: 100%;
     }
   }
-}
-
-.slide-arrow {
-  position: absolute;
-  width: 4%;
-  margin-top: 17.09375%;
-  top: 0;
-  cursor: pointer;
-  &.left-arrow {
-    left: 4%;
-  }
-  &.right-arrow {
-    right: 4%;
+  .slide-arrow {
+    position: absolute;
+    width: 4%;
+    margin-top: 17.09375%;
+    top: 0;
+    cursor: pointer;
+    &.left-arrow {
+      left: 4%;
+    }
+    &.right-arrow {
+      right: 4%;
+    }
   }
 }
 
@@ -351,6 +379,7 @@ section {
     .design {
       cursor: pointer;
       position: relative;
+      overflow: hidden;
       .img-frame {
         width: 100%;
         overflow: hidden;
@@ -375,25 +404,23 @@ section {
       }
       .text {
         position: absolute;
-        bottom: 0;
         color: $blackish;
         width: 100%;
-        display: none;
-        opacity: 0;
+        height: 50%;
         background: rgba(212,231,222, .95);
-        padding: 0 .5em;
-        box-shadow: 0 0 .5em 0 rgba(45,41,9,1);
+        animation: 1s ease-in-out slideDown, 1s ease-in-out fadeOut;
         h3,
         h4 {
           color: $blackish;
           margin: .75em 0;
+          padding: 0 0.5em;
         }
       }
       &:hover, &:focus {
         .text {
-          display: block;
-          opacity: 1;
-          animation: fadeIn .4s ease-in-out;
+          box-shadow: 0 0 .5em 0 rgba(45,41,9,1);
+          animation: 1s ease-in-out slideUp, 1s ease-in-out fadeIn;
+          margin-top: -50%
         }
       }
     }
