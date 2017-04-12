@@ -80,10 +80,6 @@ nav {
     display: block;
     color: #2D2909;
     transition: background 0.35s ease-in-out, color 0.35s ease-in-out; }
-    nav li:hover, nav li:focus {
-      cursor: pointer;
-      background: #377557;
-      color: #eee; }
     nav li a {
       display: block;
       padding: 1.5em 0 0;
@@ -92,6 +88,10 @@ nav {
       text-decoration: none;
       font-weight: bold;
       position: relative; }
+      nav li a:hover, nav li a:focus {
+        cursor: pointer;
+        background: #377557;
+        color: #eee; }
       nav li a span {
         display: block;
         margin: 0 2em; }

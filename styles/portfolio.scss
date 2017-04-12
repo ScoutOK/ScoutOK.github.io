@@ -121,13 +121,6 @@ nav {
     display: block;
     color: $twoDark;
     transition: background 0.35s ease-in-out, color 0.35s ease-in-out;
-    &:hover,
-    &:focus{
-      cursor: pointer;
-      // background: linear-gradient(rgba(55,117,87, 0) 60%, rgba(55,117,87,1) 100%);
-      background: $oneMed;
-      color: $whitish;
-    }
     a {
       display: block;
       padding: 1.5em 0 0;
@@ -136,6 +129,13 @@ nav {
       text-decoration: none;
       font-weight: bold;
       position: relative;
+      &:hover,
+      &:focus{
+        cursor: pointer;
+        // background: linear-gradient(rgba(55,117,87, 0) 60%, rgba(55,117,87,1) 100%);
+        background: $oneMed;
+        color: $whitish;
+      }
       span {
         display: block;
         margin: 0 2em;
