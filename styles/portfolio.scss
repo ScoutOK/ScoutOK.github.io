@@ -146,9 +146,20 @@ footer {
       display: flex;
       align-items: center;
     }
+    li {
+      margin-right: 1em;
+      &:hover,
+      &:focus {
+        background: $oneDark;
+      }
+    }
     img {
-      width: 3em;
-      padding-right: 1em;
+      width: 2em;
+      opacity: .75;
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
     }
   }
 }

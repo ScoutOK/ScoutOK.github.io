@@ -103,9 +103,15 @@ footer {
     padding: 0;
     display: flex;
     align-items: center; }
+  footer .social li {
+    margin-right: 1em; }
+    footer .social li:hover, footer .social li:focus {
+      background: #092D1C; }
   footer .social img {
-    width: 3em;
-    padding-right: 1em; }
+    width: 2em;
+    opacity: .75; }
+    footer .social img:hover, footer .social img:focus {
+      opacity: 1; }
 
 h2 {
   letter-spacing: .075em;

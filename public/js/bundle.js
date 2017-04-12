@@ -10442,14 +10442,15 @@ exports.default = function () {
           _react2.default.createElement(
             'a',
             { href: 'mailto:ohkeefe@gmail.com' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'ohkeefe at gmail dot com'
-            )
+            _react2.default.createElement('img', { className: 'email', src: 'public/img/envelope.svg', alt: 'email' })
           )
         )
       )
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'ohkeefe at gmail dot com'
     ),
     _react2.default.createElement(
       'span',
