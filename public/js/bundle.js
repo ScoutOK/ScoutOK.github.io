@@ -10283,44 +10283,88 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(7);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function (props) {
-  return _react2.default.createElement(
-    'div',
-    { className: 'design', id: 'design' + props.design.id, tabIndex: 0 },
-    _react2.default.createElement(
-      'div',
-      { className: 'img-frame' },
-      _react2.default.createElement('img', { className: props.design.orientation === 'land' ? 'landscape' : 'portrait', src: props.design.image, alt: props.design.alt })
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'text' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        props.design.name
-      ),
-      _react2.default.createElement(
-        'h4',
-        null,
-        props.design.year
-      ),
-      _react2.default.createElement(
-        'a',
-        { className: 'button', tabIndex: 0 },
-        'View ',
-        props.design.short,
-        ' Larger'
-      )
-    )
-  );
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Presentations = function (_Component) {
+  _inherits(Presentations, _Component);
+
+  function Presentations() {
+    _classCallCheck(this, Presentations);
+
+    var _this = _possibleConstructorReturn(this, (Presentations.__proto__ || Object.getPrototypeOf(Presentations)).call(this));
+
+    _this.state = {
+      box: false
+    };
+    _this.showBox = _this.showBox.bind(_this);
+    _this.hideBox = _this.hideBox.bind(_this);
+    return _this;
+  }
+
+  _createClass(Presentations, [{
+    key: 'showBox',
+    value: function showBox() {
+      this.setState({ box: true });
+    }
+  }, {
+    key: 'hideBox',
+    value: function hideBox() {
+      this.setState({ box: false });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var props = this.props;
+      return _react2.default.createElement(
+        'div',
+        { className: 'design', id: 'design' + props.design.id, tabIndex: 0 },
+        _react2.default.createElement(
+          'div',
+          { className: 'img-frame' },
+          _react2.default.createElement('img', { className: props.design.orientation === 'land' ? 'landscape' : 'portrait', src: props.design.image, alt: props.design.alt })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'text' },
+          _react2.default.createElement(
+            'h3',
+            null,
+            props.design.name
+          ),
+          _react2.default.createElement(
+            'h4',
+            null,
+            props.design.year
+          ),
+          _react2.default.createElement(
+            'a',
+            { className: 'button', tabIndex: 0, onClick: this.showBox },
+            'View ',
+            props.design.short,
+            ' Larger'
+          )
+        ),
+        this.state.box ? 'COOL STORY BRO' : null
+      );
+    }
+  }]);
+
+  return Presentations;
+}(_react.Component);
+
+exports.default = Presentations;
 
 /***/ }),
 /* 90 */
