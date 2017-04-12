@@ -252,7 +252,8 @@ section {
 #presentations {
   .content {
     position: relative;
-    background: linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%);
+    background: url(../img/backTris.svg) top repeat-y, linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%);
+    background-size: 75%, auto;
     padding-bottom: 2em;
   }
   .presentation {
@@ -307,7 +308,7 @@ section {
   display: flex;
   width: 100%;
   &:nth-child(odd) {
-    background: rgba(55, 117, 87, .15)
+    background: rgba(55, 117, 87, .15);
   }
   .text {
     h3 {
@@ -339,7 +340,8 @@ section {
 
 #designs {
   .content {
-    background: linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%);
+    background: url(../img/backTris.svg) top repeat-y, linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%);
+    background-size: 75%, auto;
   }
   .grid-design {
     display: grid;
