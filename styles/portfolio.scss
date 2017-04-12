@@ -32,25 +32,30 @@ $xlargeBreak: $pageWidth/.8 + 1px;
   }
 }
 
-@keyframes slideup {
+@keyframes fadeOut{
   from {
-    margin-top: 0;
-    opacity: 0;
+    opacity: 1
   }
   to {
-    margin-top: -50%;
-    opacity: 1;
+    opacity: 0;
   }
 }
 
-@keyframes slidedown {
+@keyframes slideUp {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: -50%;
+  }
+}
+
+@keyframes slideDown {
   from {
     margin-top: -50%;
-    opacity: 1;
   }
   to {
     margin-top: 0;
-    opacity: 0;
   }
 }
 
@@ -403,18 +408,18 @@ section {
         width: 100%;
         height: 50%;
         background: rgba(212,231,222, .95);
-        padding: 0 .5em;
-        animation: 1s ease-in-out slidedown;
+        animation: 1s ease-in-out slideDown, 1s ease-in-out fadeOut;
         h3,
         h4 {
           color: $blackish;
           margin: .75em 0;
+          padding: 0 0.5em;
         }
       }
       &:hover, &:focus {
         .text {
           box-shadow: 0 0 .5em 0 rgba(45,41,9,1);
-          animation: 1s ease-in-out slideup;
+          animation: 1s ease-in-out slideUp, 1s ease-in-out fadeIn;
           margin-top: -50%
         }
       }

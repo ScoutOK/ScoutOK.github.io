@@ -8,7 +8,6 @@ export default (props) => (
     <div className='text'>
       <h3>{props.design.name}</h3>
       <h4>{props.design.year}</h4>
-      {/*<p>{props.design.description}</p>*/}
     </div>
   </a>
 )
