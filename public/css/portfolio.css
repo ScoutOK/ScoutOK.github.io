@@ -106,7 +106,7 @@ footer {
   footer .social li {
     margin-right: 1em; }
     footer .social li:hover, footer .social li:focus {
-      background: #092D1C; }
+      background: radial-gradient(#092D1C 0%, #377557 1em); }
   footer .social img {
     width: 2em;
     opacity: .75; }

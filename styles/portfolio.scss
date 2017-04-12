@@ -150,7 +150,7 @@ footer {
       margin-right: 1em;
       &:hover,
       &:focus {
-        background: $oneDark;
+        background: radial-gradient($oneDark 0%, $oneMed 1em);
       }
     }
     img {
