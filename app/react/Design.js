@@ -8,6 +8,7 @@ export default (props) => (
     <div className='text'>
       <h3>{props.design.name}</h3>
       <h4>{props.design.year}</h4>
+      <a className='button'>View {props.design.short} Larger</a>
     </div>
   </a>
 )

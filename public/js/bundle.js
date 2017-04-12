@@ -10310,6 +10310,13 @@ exports.default = function (props) {
         'h4',
         null,
         props.design.year
+      ),
+      _react2.default.createElement(
+        'a',
+        { className: 'button' },
+        'View ',
+        props.design.short,
+        ' Larger'
       )
     )
   );
@@ -10890,6 +10897,7 @@ exports.default = function (props) {
 module.exports = [{
   id: 1,
   name: 'Universal Design Case Studies',
+  short: 'UD Case Studies',
   type: 'Website Design',
   year: '2016',
   image: 'public/img/udcasestudies.png',
@@ -10898,6 +10906,7 @@ module.exports = [{
 }, {
   id: 2,
   name: 'ADA 24th Anniversary Celebration: Poetry Slam',
+  short: 'ADA 24th',
   type: 'Print Media',
   year: '2015',
   image: 'public/img/SlamFlyer.png',
@@ -10906,6 +10915,7 @@ module.exports = [{
 }, {
   id: 3,
   name: 'Urinetown Poster',
+  short: 'Urinetown Poster',
   type: 'Print Media',
   year: '2012',
   image: 'public/img/urinetown.png',
@@ -10914,6 +10924,7 @@ module.exports = [{
 }, {
   id: 4,
   name: 'Rocky Horror Show Poster',
+  short: 'Rocky Horror Poster',
   type: 'Print Media',
   year: '2013',
   image: 'public/img/RockyHorror.jpg',
@@ -10922,6 +10933,7 @@ module.exports = [{
 }, {
   id: 5,
   name: 'Institute for Human Centered Design',
+  short: 'IHCD Redesign',
   type: 'Website Design',
   year: '2015',
   image: 'public/img/ihcd.png',
@@ -10929,6 +10941,7 @@ module.exports = [{
 }, {
   id: 6,
   name: 'MBTA Ad for CPL Conference',
+  short: 'CPL Conference',
   type: 'Print Design',
   year: '2011',
   image: 'public/img/mbta.png',
@@ -10937,6 +10950,7 @@ module.exports = [{
 }, {
   id: 7,
   name: 'Reefer Madness Web Design',
+  short: 'Reefer Madness',
   type: 'Web Image',
   year: '2012',
   image: 'public/img/ReeferGraphic.png',
@@ -10945,6 +10959,7 @@ module.exports = [{
 }, {
   id: 8,
   name: '25th Annual Putnam County Spelling Bee Posters',
+  short: 'Spelling Bee',
   type: 'Print Media',
   year: '2011',
   image: 'public/img/SpellingBee.png',
@@ -10953,6 +10968,7 @@ module.exports = [{
 }, {
   id: 9,
   name: 'Urinetown Teaser Poster',
+  short: 'Urinetown Teaser',
   type: 'Print Media',
   year: '2012',
   image: 'public/img/UrinetownTeaser.png',
@@ -10961,6 +10977,7 @@ module.exports = [{
 }, {
   id: 10,
   name: 'Citco Sign',
+  short: 'Citco Sign',
   type: 'Photography',
   year: '2007',
   image: 'public/img/citco.jpg',
