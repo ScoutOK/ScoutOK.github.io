@@ -51,7 +51,7 @@ nav {
   width: 100vw;
   z-index: 1000;
   color: #333;
-  box-shadow: 0px 0.5em 0.5em -0.5em #2d2909; }
+  box-shadow: 0 0.5em 0.5em -0.5em #2d2909; }
   nav ul {
     display: flex;
     list-style: none;
@@ -103,9 +103,15 @@ footer {
     padding: 0;
     display: flex;
     align-items: center; }
+  footer .social li {
+    margin-right: 1em; }
+    footer .social li:hover, footer .social li:focus {
+      background: radial-gradient(#092D1C 0%, #377557 1em); }
   footer .social img {
-    width: 3em;
-    padding-right: 1em; }
+    width: 2em;
+    opacity: .75; }
+    footer .social img:hover, footer .social img:focus {
+      opacity: 1; }
 
 h2 {
   letter-spacing: .075em;
@@ -272,11 +278,17 @@ section {
     #designs .grid-design .design .text {
       position: absolute;
       bottom: 0;
+      color: #333;
       width: 100%;
       display: none;
       opacity: 0;
-      background: linear-gradient(rgba(9, 45, 28, 0) 0%, rgba(9, 45, 28, 0.9) 15%);
-      padding: 0 .5em; }
+      background: rgba(212, 231, 222, 0.95);
+      padding: 0 .5em;
+      box-shadow: 0 0 0.5em 0 #2d2909; }
+      #designs .grid-design .design .text h3,
+      #designs .grid-design .design .text h4 {
+        color: #333;
+        margin: .75em 0; }
     #designs .grid-design .design:hover .text, #designs .grid-design .design:focus .text {
       display: block;
       opacity: 1;
