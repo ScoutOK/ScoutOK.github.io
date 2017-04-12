@@ -46,13 +46,13 @@ $xlargeBreak: $pageWidth/.8 + 1px;
     margin-top: 0;
   }
   to {
-    margin-top: -50%;
+    margin-top: -60%;
   }
 }
 
 @keyframes slideDown {
   from {
-    margin-top: -50%;
+    margin-top: -60%;
   }
   to {
     margin-top: 0;
@@ -177,19 +177,24 @@ footer {
     }
     li {
       margin-right: 1em;
-      &:hover,
-      &:focus {
-        background: radial-gradient($oneDark 0%, $oneMed 1em);
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        &:hover,
+        &:focus {
+          background: radial-gradient($oneDark 0%, $oneMed 1em);
+          img {
+            opacity: 1;
+          }
+        }
+        img {
+          width: 2em;
+          opacity: .75;
+        }
       }
     }
-    img {
-      width: 2em;
-      opacity: .75;
-      &:hover,
-      &:focus {
-        opacity: 1;
-      }
-    }
+    
   }
 }
 
@@ -404,23 +409,32 @@ section {
       }
       .text {
         position: absolute;
-        color: $blackish;
+        color: $whitish;
         width: 100%;
-        height: 50%;
-        background: rgba(212,231,222, .95);
+        height: 60%;
+        background: rgba(9,45,28, .95);
         animation: 1s ease-in-out slideDown, 1s ease-in-out fadeOut;
-        h3,
-        h4 {
+        border: 1px $oneLight solid;
+        h3 {
           color: $blackish;
-          margin: .75em 0;
+          background: $oneLight;
+          padding: .75em 0.5em;
+          margin: 0;
+        }
+        h4 {
           padding: 0 0.5em;
+          margin: .75em 0;
+        }
+        a {
+          display: inline-block;
+          margin-left: .5em;
         }
       }
       &:hover, &:focus {
         .text {
           box-shadow: 0 0 .5em 0 rgba(45,41,9,1);
           animation: 1s ease-in-out slideUp, 1s ease-in-out fadeIn;
-          margin-top: -50%
+          margin-top: -60%
         }
       }
     }
