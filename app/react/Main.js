@@ -7,6 +7,7 @@ import Presentations from './Presentations';
 import Designs from './Designs';
 import Transition from './Transition';
 import Footer from './Footer';
+import Shadowbox from './Shadowbox';
 
 export default class Main extends Component {
   constructor() {
@@ -26,6 +27,7 @@ export default class Main extends Component {
           <Designs />
           <Footer />
         </div>
+        {true ? <Shadowbox /> : null}
       </div>
     )
   }

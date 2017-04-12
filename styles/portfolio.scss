@@ -107,7 +107,7 @@ nav {
   top: 0;
   height: $navHeight;
   width: 100vw;
-  z-index: 1000;
+  z-index: 800;
   color: $blackish;
   box-shadow: 0 .5em .5em -.5em rgba(45,41,9,1);
   ul {
@@ -470,6 +470,16 @@ section {
       background-size: cover;
     }
   }
+}
+
+#shadowbox {
+  background: rgba(9,45,28, .95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 900;
 }
 
 @media screen and (min-width: $largeBreak) {

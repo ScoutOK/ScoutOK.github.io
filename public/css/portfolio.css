@@ -67,7 +67,7 @@ nav {
   top: 0;
   height: 3.5em;
   width: 100vw;
-  z-index: 1000;
+  z-index: 800;
   color: #333;
   box-shadow: 0 0.5em 0.5em -0.5em #2d2909; }
   nav ul {
@@ -348,6 +348,15 @@ section {
     #pres-dots .dot.current {
       background: url(../img/circleFill.svg);
       background-size: cover; }
+
+#shadowbox {
+  background: rgba(9, 45, 28, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 900; }
 
 @media screen and (min-width: 1501px) {
   nav {
