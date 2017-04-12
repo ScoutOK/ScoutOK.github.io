@@ -252,7 +252,7 @@ section {
 #presentations {
   .content {
     position: relative;
-    background: linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%);
+    background: url(../img/backTris.svg) top, linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%);
     padding-bottom: 2em;
   }
   .presentation {
@@ -339,7 +339,7 @@ section {
 
 #designs {
   .content {
-    background: url(../img/backTris.svg), linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%);
+    background: url(../img/backTris.svg) top, linear-gradient(90deg, $oneDark 2%, $oneMed, $oneDark 98%);
   }
   .grid-design {
     display: grid;
