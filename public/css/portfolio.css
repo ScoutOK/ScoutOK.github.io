@@ -182,7 +182,8 @@ section {
 
 #presentations .content {
   position: relative;
-  background: url(../img/backTris.svg) top, linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%);
+  background: url(../img/backTris.svg) top repeat-y, linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%);
+  background-size: 75%, auto;
   padding-bottom: 2em; }
 
 #presentations .presentation {
@@ -248,7 +249,8 @@ section {
     box-shadow: inset 0px 0px 36px 0px rgba(9, 45, 28, 0.75); }
 
 #designs .content {
-  background: url(../img/backTris.svg) top, linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%); }
+  background: url(../img/backTris.svg) top repeat-y, linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%);
+  background-size: 75%, auto; }
 
 #designs .grid-design {
   display: grid;
