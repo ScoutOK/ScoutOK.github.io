@@ -9,7 +9,7 @@ export default (props) => (
     </div>
     <h3>{props.presentation.name}</h3>
     <p>{props.presentation.description}</p>
-    <a className='button' tabIndex={0}>Transcript</a>
-    {true ? <ScrollText text={props.presentation.transcript}/>:null}
+    <a className='button' tabIndex={0} onClick={props.toggleText}>{props.showText ? 'Hide' : 'Show'} Transcript</a>
+    {props.showText ? <ScrollText text={props.presentation.transcript}/> : null}
   </div>
 )

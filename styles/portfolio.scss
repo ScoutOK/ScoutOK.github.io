@@ -432,12 +432,11 @@ section {
 .scroll-text {
   background: $oneDark;
   color: $whitish;
-  padding: 1em;
+  padding: 0 1em 2em;
   overflow: scroll;
-  height: 35vh;
+  height: 40vh;
   width: 100%;
   margin-top: 1em;
-
 }
 
 @media screen and (min-width: $largeBreak) {
