@@ -10,6 +10,6 @@ export default (props) => (
     <h3>{props.presentation.name}</h3>
     <p>{props.presentation.description}</p>
     <a className='button' tabIndex={0}>Transcript</a>
-    {true ? <ScrollText/>:null}
+    {true ? <ScrollText text={props.presentation.transcript}/>:null}
   </div>
 )
