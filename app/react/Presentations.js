@@ -10,10 +10,12 @@ export default class Presentations extends Component {
     super()
     this.state = {
       currSlide: 1,
-      slideNum: presentations.length
+      slideNum: presentations.length,
+      transcript: false,
     }
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
+    this.toggleTranscript = this.toggleTranscript.bind(this)
   }
 
   next (currSlide, slideNum) {
@@ -28,6 +30,10 @@ export default class Presentations extends Component {
     else this.setState({currSlide: slideNum});
   }
 
+  toggleTranscript () {
+    this.setState({transcript: !this.state.transcript});
+  }
+
   render () {
 
   return (
@@ -36,7 +42,12 @@ export default class Presentations extends Component {
       <div className='content'>
         <img className='slide-arrow left-arrow' src='public/img/slideLeft.svg' alt='move to previous slide' onClick={()=>{this.prev(this.state.currSlide, this.state.slideNum)}}/>
         {presentations.map((presentation, idx)=> {
-          return <Presentation presentation={presentation} key={presentation.id} active={idx === this.state.currSlide - 1}/>
+          return <Presentation
+                  presentation={presentation}
+                  showText={this.state.transcript}
+                  toggleText={this.toggleTranscript}
+                  toggle key={presentation.id}
+                  active={idx === this.state.currSlide - 1}/>
         })}
         <div id='pres-dots'>
           {presentations.map((presentation, idx)=>{

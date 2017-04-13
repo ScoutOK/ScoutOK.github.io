@@ -338,6 +338,15 @@ section {
       background: url(../img/circleFill.svg);
       background-size: cover; }
 
+.scroll-text {
+  background: #092D1C;
+  color: #eee;
+  padding: 0 1em 2em;
+  overflow: scroll;
+  height: 40vh;
+  width: 100%;
+  margin-top: 1em; }
+
 @media screen and (min-width: 1501px) {
   nav {
     height: 100%;
