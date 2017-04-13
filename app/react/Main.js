@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 import Navbar from './Navbar';
 import Hero from './Hero';
@@ -9,7 +10,8 @@ import Transition from './Transition';
 import Footer from './Footer';
 import Shadowbox from './Shadowbox';
 
-export default class Main extends Component {
+
+class Main extends Component {
   constructor() {
     super();
     this.state = {}
@@ -27,8 +29,14 @@ export default class Main extends Component {
           <Designs />
           <Footer />
         </div>
-        {true ? <Shadowbox /> : null}
+        {this.props.showBox ? <Shadowbox /> : null}
       </div>
     )
   }
 }
+
+const mapState = ({showBox}) => ({
+  showBox
+})
+
+export default connect(mapState)(Main);
