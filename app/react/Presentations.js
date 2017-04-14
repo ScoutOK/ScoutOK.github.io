@@ -15,20 +15,30 @@ export default class Presentations extends Component {
     }
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
+    this.enterNextArrow = this.enterNextArrow.bind(this);
+    this.enterPrevArrow = this.enterPrevArrow.bind(this);
     this.toggleTranscript = this.toggleTranscript.bind(this);
     this.enterToggle = this.enterToggle.bind(this);
   }
 
-  next (currSlide, slideNum) {
-    currSlide++
-    if (currSlide <= slideNum) this.setState({currSlide: currSlide});
+  next () {
+    const currSlide = this.state.currSlide + 1
+    if (currSlide <= this.state.slideNum) this.setState({currSlide: currSlide});
     else this.setState({currSlide: 1});
   }
 
-  prev (currSlide, slideNum) {
-    currSlide--
+  prev () {
+    const currSlide = this.state.currSlide - 1
     if (currSlide >= 1) this.setState({currSlide: currSlide});
-    else this.setState({currSlide: slideNum});
+    else this.setState({currSlide: this.state.slideNum});
+  }
+
+  enterNextArrow (e) {
+    if(e.key === 'Enter') this.next();
+  }
+
+  enterPrevArrow (e) {
+    if(e.key === 'Enter') this.prev();
   }
 
   toggleTranscript () {
@@ -45,7 +55,7 @@ export default class Presentations extends Component {
     <section id='presentations'>
       <h2>Presentations</h2>
       <div className='content'>
-        <img className='slide-arrow left-arrow' src='public/img/slideLeft.svg' alt='move to previous slide' tabIndex={0} onClick={()=>{this.prev(this.state.currSlide, this.state.slideNum)}}/>
+        <img className='slide-arrow left-arrow' src='public/img/slideLeft.svg' alt='move to previous slide' tabIndex={0} onClick={this.prev} onKeyDown={this.enterPrevArrow}/>
         {presentations.map((presentation, idx)=> {
           return <Presentation
                   presentation={presentation}
@@ -63,7 +73,7 @@ export default class Presentations extends Component {
             )
           })}
         </div>
-        <img className='slide-arrow right-arrow' src='public/img/slideRight.svg' alt='move to next slide' tabIndex={0} onClick={()=>{this.next(this.state.currSlide, this.state.slideNum)}}/>
+        <img className='slide-arrow right-arrow' src='public/img/slideRight.svg' alt='move to next slide' tabIndex={0} onClick={this.next}  onKeyDown={this.enterNextArrow}/>
       </div>
       <Transition />
     </section>

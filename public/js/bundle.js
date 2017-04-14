@@ -10707,6 +10707,8 @@ var Presentations = function (_Component) {
     };
     _this.next = _this.next.bind(_this);
     _this.prev = _this.prev.bind(_this);
+    _this.enterNextArrow = _this.enterNextArrow.bind(_this);
+    _this.enterPrevArrow = _this.enterPrevArrow.bind(_this);
     _this.toggleTranscript = _this.toggleTranscript.bind(_this);
     _this.enterToggle = _this.enterToggle.bind(_this);
     return _this;
@@ -10714,15 +10716,25 @@ var Presentations = function (_Component) {
 
   _createClass(Presentations, [{
     key: 'next',
-    value: function next(currSlide, slideNum) {
-      currSlide++;
-      if (currSlide <= slideNum) this.setState({ currSlide: currSlide });else this.setState({ currSlide: 1 });
+    value: function next() {
+      var currSlide = this.state.currSlide + 1;
+      if (currSlide <= this.state.slideNum) this.setState({ currSlide: currSlide });else this.setState({ currSlide: 1 });
     }
   }, {
     key: 'prev',
-    value: function prev(currSlide, slideNum) {
-      currSlide--;
-      if (currSlide >= 1) this.setState({ currSlide: currSlide });else this.setState({ currSlide: slideNum });
+    value: function prev() {
+      var currSlide = this.state.currSlide - 1;
+      if (currSlide >= 1) this.setState({ currSlide: currSlide });else this.setState({ currSlide: this.state.slideNum });
+    }
+  }, {
+    key: 'enterNextArrow',
+    value: function enterNextArrow(e) {
+      if (e.key === 'Enter') this.next();
+    }
+  }, {
+    key: 'enterPrevArrow',
+    value: function enterPrevArrow(e) {
+      if (e.key === 'Enter') this.prev();
     }
   }, {
     key: 'toggleTranscript',
@@ -10750,9 +10762,7 @@ var Presentations = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'content' },
-          _react2.default.createElement('img', { className: 'slide-arrow left-arrow', src: 'public/img/slideLeft.svg', alt: 'move to previous slide', tabIndex: 0, onClick: function onClick() {
-              _this2.prev(_this2.state.currSlide, _this2.state.slideNum);
-            } }),
+          _react2.default.createElement('img', { className: 'slide-arrow left-arrow', src: 'public/img/slideLeft.svg', alt: 'move to previous slide', tabIndex: 0, onClick: this.prev, onKeyDown: this.enterPrevArrow }),
           _presentations2.default.map(function (presentation, idx) {
             return _react2.default.createElement(_Presentation2.default, {
               presentation: presentation,
@@ -10769,9 +10779,7 @@ var Presentations = function (_Component) {
               return _react2.default.createElement('div', { className: idx + 1 === _this2.state.currSlide ? 'dot current' : 'dot', key: idx });
             })
           ),
-          _react2.default.createElement('img', { className: 'slide-arrow right-arrow', src: 'public/img/slideRight.svg', alt: 'move to next slide', tabIndex: 0, onClick: function onClick() {
-              _this2.next(_this2.state.currSlide, _this2.state.slideNum);
-            } })
+          _react2.default.createElement('img', { className: 'slide-arrow right-arrow', src: 'public/img/slideRight.svg', alt: 'move to next slide', tabIndex: 0, onClick: this.next, onKeyDown: this.enterNextArrow })
         ),
         _react2.default.createElement(_Transition2.default, null)
       );
