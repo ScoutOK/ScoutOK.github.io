@@ -159,11 +159,17 @@ nav {
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
   width: 100%;
   background: $oneMed;
-  color: $whitish;
+  color: rgba(238, 238, 238, .75);
   padding: 3em;
   border-top: $smallBorder;
+  img {
+    opacity: .75;
+  }
   h3 {
     margin: 0;
   }
@@ -184,11 +190,18 @@ footer {
     }
     img {
       width: 2em;
-      opacity: .75;
       &:hover,
       &:focus {
         opacity: 1;
       }
+    }
+    
+  }
+  .right {
+    img {
+      width: 3em;
+      display: inline-block;
+      margin-bottom: -1em;
     }
   }
 }
