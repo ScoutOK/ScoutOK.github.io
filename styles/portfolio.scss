@@ -159,11 +159,17 @@ nav {
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
   width: 100%;
   background: $oneMed;
-  color: $whitish;
+  color: rgba(238, 238, 238, .75);
   padding: 3em;
   border-top: $smallBorder;
+  img {
+    opacity: .75;
+  }
   h3 {
     margin: 0;
   }
@@ -177,24 +183,26 @@ footer {
     }
     li {
       margin-right: 1em;
-      a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        &:hover,
-        &:focus {
-          background: radial-gradient($oneDark 0%, $oneMed 1em);
-          img {
-            opacity: 1;
-          }
-        }
-        img {
-          width: 2em;
-          opacity: .75;
-        }
+      &:hover,
+      &:focus {
+        background: radial-gradient($oneDark 0%, $oneMed 1em);
+      }
+    }
+    img {
+      width: 2em;
+      &:hover,
+      &:focus {
+        opacity: 1;
       }
     }
     
+  }
+  .right {
+    img {
+      width: 3em;
+      display: inline-block;
+      margin-bottom: -1em;
+    }
   }
 }
 
@@ -480,6 +488,16 @@ section {
   width: 100vw;
   height: 100vh;
   z-index: 900;
+}
+
+.scroll-text {
+  background: $oneDark;
+  color: $whitish;
+  padding: 0 1em 2em;
+  overflow: scroll;
+  height: 40vh;
+  width: 100%;
+  margin-top: 1em;
 }
 
 @media screen and (min-width: $largeBreak) {

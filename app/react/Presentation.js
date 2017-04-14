@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import ScrollText from './ScrollText';
 
 export default (props) => (
   <div className={props.active ? 'presentation active' : 'presentation'} id={props.presentation.id}>
@@ -7,6 +9,7 @@ export default (props) => (
     </div>
     <h3>{props.presentation.name}</h3>
     <p>{props.presentation.description}</p>
-    <a href='' className='button'>Transcript</a>
+    <a className='button' tabIndex={0} onClick={props.toggleText} onKeyPress={(props.enterToggle)}>{props.showText ? 'Hide' : 'Show'} Transcript</a>
+    {props.showText ? <ScrollText text={props.presentation.transcript}/> : null}
   </div>
 )

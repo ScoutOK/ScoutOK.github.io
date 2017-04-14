@@ -109,11 +109,16 @@ nav {
         opacity: 1; }
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
   width: 100%;
   background: #377557;
-  color: #eee;
+  color: rgba(238, 238, 238, 0.75);
   padding: 3em;
   border-top: #D4E7DE solid 0.1em; }
+  footer img {
+    opacity: .75; }
   footer h3 {
     margin: 0; }
   footer .social ul {
@@ -124,17 +129,16 @@ footer {
     margin-top: 0; }
   footer .social li {
     margin-right: 1em; }
-    footer .social li a {
-      display: block;
-      width: 100%;
-      height: 100%; }
-      footer .social li a:hover, footer .social li a:focus {
-        background: radial-gradient(#092D1C 0%, #377557 1em); }
-        footer .social li a:hover img, footer .social li a:focus img {
-          opacity: 1; }
-      footer .social li a img {
-        width: 2em;
-        opacity: .75; }
+    footer .social li:hover, footer .social li:focus {
+      background: radial-gradient(#092D1C 0%, #377557 1em); }
+  footer .social img {
+    width: 2em; }
+    footer .social img:hover, footer .social img:focus {
+      opacity: 1; }
+  footer .right img {
+    width: 3em;
+    display: inline-block;
+    margin-bottom: -1em; }
 
 h2 {
   letter-spacing: .075em;
@@ -357,6 +361,15 @@ section {
   width: 100vw;
   height: 100vh;
   z-index: 900; }
+
+.scroll-text {
+  background: #092D1C;
+  color: #eee;
+  padding: 0 1em 2em;
+  overflow: scroll;
+  height: 40vh;
+  width: 100%;
+  margin-top: 1em; }
 
 @media screen and (min-width: 1501px) {
   nav {
