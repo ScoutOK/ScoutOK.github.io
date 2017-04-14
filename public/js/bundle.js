@@ -10750,7 +10750,7 @@ var Presentations = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'content' },
-          _react2.default.createElement('img', { className: 'slide-arrow left-arrow', src: 'public/img/slideLeft.svg', alt: 'move to previous slide', onClick: function onClick() {
+          _react2.default.createElement('img', { className: 'slide-arrow left-arrow', src: 'public/img/slideLeft.svg', alt: 'move to previous slide', tabIndex: 0, onClick: function onClick() {
               _this2.prev(_this2.state.currSlide, _this2.state.slideNum);
             } }),
           _presentations2.default.map(function (presentation, idx) {
@@ -10769,7 +10769,7 @@ var Presentations = function (_Component) {
               return _react2.default.createElement('div', { className: idx + 1 === _this2.state.currSlide ? 'dot current' : 'dot', key: idx });
             })
           ),
-          _react2.default.createElement('img', { className: 'slide-arrow right-arrow', src: 'public/img/slideRight.svg', alt: 'move to next slide', onClick: function onClick() {
+          _react2.default.createElement('img', { className: 'slide-arrow right-arrow', src: 'public/img/slideRight.svg', alt: 'move to next slide', tabIndex: 0, onClick: function onClick() {
               _this2.next(_this2.state.currSlide, _this2.state.slideNum);
             } })
         ),

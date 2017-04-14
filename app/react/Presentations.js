@@ -45,7 +45,7 @@ export default class Presentations extends Component {
     <section id='presentations'>
       <h2>Presentations</h2>
       <div className='content'>
-        <img className='slide-arrow left-arrow' src='public/img/slideLeft.svg' alt='move to previous slide' onClick={()=>{this.prev(this.state.currSlide, this.state.slideNum)}}/>
+        <img className='slide-arrow left-arrow' src='public/img/slideLeft.svg' alt='move to previous slide' tabIndex={0} onClick={()=>{this.prev(this.state.currSlide, this.state.slideNum)}}/>
         {presentations.map((presentation, idx)=> {
           return <Presentation
                   presentation={presentation}
@@ -63,7 +63,7 @@ export default class Presentations extends Component {
             )
           })}
         </div>
-        <img className='slide-arrow right-arrow' src='public/img/slideRight.svg' alt='move to next slide' onClick={()=>{this.next(this.state.currSlide, this.state.slideNum)}}/>
+        <img className='slide-arrow right-arrow' src='public/img/slideRight.svg' alt='move to next slide' tabIndex={0} onClick={()=>{this.next(this.state.currSlide, this.state.slideNum)}}/>
       </div>
       <Transition />
     </section>
