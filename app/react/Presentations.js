@@ -15,7 +15,8 @@ export default class Presentations extends Component {
     }
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
-    this.toggleTranscript = this.toggleTranscript.bind(this)
+    this.toggleTranscript = this.toggleTranscript.bind(this);
+    this.enterToggle = this.enterToggle.bind(this);
   }
 
   next (currSlide, slideNum) {
@@ -34,6 +35,10 @@ export default class Presentations extends Component {
     this.setState({transcript: !this.state.transcript});
   }
 
+  enterToggle (e) {
+    if(e.key === 'Enter') this.toggleTranscript();
+  }
+
   render () {
 
   return (
@@ -46,7 +51,8 @@ export default class Presentations extends Component {
                   presentation={presentation}
                   showText={this.state.transcript}
                   toggleText={this.toggleTranscript}
-                  toggle key={presentation.id}
+                  enterToggle={this.enterToggle}
+                  key={presentation.id}
                   active={idx === this.state.currSlide - 1}/>
         })}
         <div id='pres-dots'>
