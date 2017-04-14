@@ -109,11 +109,16 @@ nav {
         opacity: 1; }
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
   width: 100%;
   background: #377557;
-  color: #eee;
+  color: rgba(238, 238, 238, 0.75);
   padding: 3em;
   border-top: #D4E7DE solid 0.1em; }
+  footer img {
+    opacity: .75; }
   footer h3 {
     margin: 0; }
   footer .social ul {
@@ -127,10 +132,13 @@ footer {
     footer .social li:hover, footer .social li:focus {
       background: radial-gradient(#092D1C 0%, #377557 1em); }
   footer .social img {
-    width: 2em;
-    opacity: .75; }
+    width: 2em; }
     footer .social img:hover, footer .social img:focus {
       opacity: 1; }
+  footer .right img {
+    width: 3em;
+    display: inline-block;
+    margin-bottom: -1em; }
 
 h2 {
   letter-spacing: .075em;

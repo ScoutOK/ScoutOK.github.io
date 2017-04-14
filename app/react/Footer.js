@@ -1,7 +1,8 @@
 import React from 'react';
 
 export default () => (
-  <footer id='contact'>
+  <footer>
+    <div>
       <div className='social'>
         <ul>
           <li><a href='http://github.com/scoutok'><img src='public/img/github.svg' alt='GitHub'/></a></li>
@@ -14,5 +15,7 @@ export default () => (
       </div>
       <p>ohkeefe at gmail dot com</p>
       <span>© 2017 Scout O'Keefe</span>
+    </div>
+    <p className='right'>Made with<img className='react-icon' src='public/img/react.svg' alt='React JS'/></p>
   </footer>
 )

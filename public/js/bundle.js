@@ -10384,78 +10384,88 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function () {
   return _react2.default.createElement(
     'footer',
-    { id: 'contact' },
+    null,
     _react2.default.createElement(
       'div',
-      { className: 'social' },
+      null,
       _react2.default.createElement(
-        'ul',
-        null,
+        'div',
+        { className: 'social' },
         _react2.default.createElement(
-          'li',
+          'ul',
           null,
           _react2.default.createElement(
-            'a',
-            { href: 'http://github.com/scoutok' },
-            _react2.default.createElement('img', { src: 'public/img/github.svg', alt: 'GitHub' })
-          )
-        ),
-        _react2.default.createElement(
-          'li',
-          null,
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: 'http://github.com/scoutok' },
+              _react2.default.createElement('img', { src: 'public/img/github.svg', alt: 'GitHub' })
+            )
+          ),
           _react2.default.createElement(
-            'a',
-            { href: 'http://twitter.com/okscout' },
-            _react2.default.createElement('img', { src: 'public/img/twitter.svg', alt: 'Twitter' })
-          )
-        ),
-        _react2.default.createElement(
-          'li',
-          null,
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: 'http://twitter.com/okscout' },
+              _react2.default.createElement('img', { src: 'public/img/twitter.svg', alt: 'Twitter' })
+            )
+          ),
           _react2.default.createElement(
-            'a',
-            { href: 'http://linkedin.com/in/scoutok/' },
-            _react2.default.createElement('img', { src: 'public/img/linkedin.svg', alt: 'LinkedIn' })
-          )
-        ),
-        _react2.default.createElement(
-          'li',
-          null,
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: 'http://linkedin.com/in/scoutok/' },
+              _react2.default.createElement('img', { src: 'public/img/linkedin.svg', alt: 'LinkedIn' })
+            )
+          ),
           _react2.default.createElement(
-            'a',
-            { href: 'http://stackoverflow.com/users/7147809/scout-okeefe?tab=profile' },
-            _react2.default.createElement('img', { src: 'public/img/stackOverflow.svg', alt: 'Stack Overflow' })
-          )
-        ),
-        _react2.default.createElement(
-          'li',
-          null,
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: 'http://stackoverflow.com/users/7147809/scout-okeefe?tab=profile' },
+              _react2.default.createElement('img', { src: 'public/img/stackOverflow.svg', alt: 'Stack Overflow' })
+            )
+          ),
           _react2.default.createElement(
-            'a',
-            { href: 'http://codepen.io/scoutok/' },
-            _react2.default.createElement('img', { src: 'public/img/codepen.svg', alt: 'Code Pen' })
-          )
-        ),
-        _react2.default.createElement(
-          'li',
-          null,
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: 'http://codepen.io/scoutok/' },
+              _react2.default.createElement('img', { src: 'public/img/codepen.svg', alt: 'Code Pen' })
+            )
+          ),
           _react2.default.createElement(
-            'a',
-            { href: 'mailto:ohkeefe@gmail.com' },
-            _react2.default.createElement('img', { className: 'email', src: 'public/img/envelope.svg', alt: 'email' })
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: 'mailto:ohkeefe@gmail.com' },
+              _react2.default.createElement('img', { className: 'email', src: 'public/img/envelope.svg', alt: 'email' })
+            )
           )
         )
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'ohkeefe at gmail dot com'
+      ),
+      _react2.default.createElement(
+        'span',
+        null,
+        '\xA9 2017 Scout O\'Keefe'
       )
     ),
     _react2.default.createElement(
       'p',
-      null,
-      'ohkeefe at gmail dot com'
-    ),
-    _react2.default.createElement(
-      'span',
-      null,
-      '\xA9 2017 Scout O\'Keefe'
+      { className: 'right' },
+      'Made with',
+      _react2.default.createElement('img', { className: 'react-icon', src: 'public/img/react.svg', alt: 'React JS' })
     )
   );
 };
