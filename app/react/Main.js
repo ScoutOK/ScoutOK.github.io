@@ -6,6 +6,7 @@ import Projects from './Projects';
 import Presentations from './Presentations';
 import Designs from './Designs';
 import Transition from './Transition';
+import About from './About';
 import Footer from './Footer';
 
 export default class Main extends Component {
@@ -24,6 +25,7 @@ export default class Main extends Component {
           <Projects />
           <Presentations />
           <Designs />
+          <About />
           <Footer />
         </div>
       </div>
