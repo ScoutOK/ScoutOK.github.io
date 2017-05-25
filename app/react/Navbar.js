@@ -31,6 +31,12 @@ export default (props) => {
           </Link>
         </li>
         <li>
+          <Link activeClass='active' to='about' spy={true} smooth={true}>
+            <span>About</span>
+            <div className='underline'></div>
+          </Link>
+        </li>
+        <li>
           <Link activeClass='active' to='contact' spy={true} smooth={true}>
             <span>Contact</span>
             <div className='underline'></div>

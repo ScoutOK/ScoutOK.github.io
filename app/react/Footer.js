@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => (
-  <footer>
+  <footer id='contact'>
     <div>
       <div className='social'>
         <ul>
