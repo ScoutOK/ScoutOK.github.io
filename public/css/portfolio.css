@@ -207,6 +207,10 @@ section {
     padding: 1em;
     background: #377557; }
 
+#about .content {
+  padding: 2em 2em 3em;
+  background: rgba(55, 117, 87, 0.15); }
+
 #presentations .content {
   position: relative;
   background: url(../img/backTris.svg) top repeat-y, linear-gradient(90deg, #092D1C 2%, #377557, #092D1C 98%);
