@@ -291,6 +291,13 @@ section {
   }
 }
 
+#about {
+  .content {
+      padding: 2em 2em 3em;
+      background: rgba(55, 117, 87, .15)
+  }
+}
+
 #presentations {
   .content {
     position: relative;
